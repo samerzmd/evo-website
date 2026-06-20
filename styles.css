@@ -55,9 +55,8 @@ section{position:relative}
 .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.82);backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s}
 .nav.scrolled{border-color:var(--line);box-shadow:0 6px 24px -20px rgba(12,69,67,.5)}
 .nav__inner{display:flex;align-items:center;gap:1.5rem;height:72px}
-.brand{display:flex;align-items:center;gap:.55rem;font-weight:800;font-size:1.45rem;letter-spacing:.04em;color:var(--teal)}
-.brand__mark{width:30px;height:30px;fill:var(--green)}
-.brand__word{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.brand{display:flex;align-items:center;color:#0a8552}
+.brand__logo{height:34px;width:auto;display:block}
 .nav__links{display:flex;gap:1.6rem;margin-inline-start:auto;font-weight:600;font-size:.96rem;color:var(--slate)}
 .nav__links a{position:relative;transition:color .2s}
 .nav__links a:hover{color:var(--teal)}
@@ -269,7 +268,7 @@ html[dir="rtl"] .plug-tag::before{left:auto;right:.7rem}
 .footer{background:var(--ink);color:#cdddd9;padding:64px 0 28px}
 .footer__grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.1)}
 .brand--light{color:#fff}
-.brand--light .brand__word{color:#fff;-webkit-text-fill-color:#fff}
+.footer__brand .brand__logo{height:40px}
 .footer__slogan{color:var(--lime)!important;font-weight:800;margin-top:1rem!important;font-size:1rem}
 .footer__brand p{color:#9fb6b1;margin-top:.5rem;max-width:34ch;font-size:.95rem}
 .footer__col h4{color:#fff;margin-bottom:1rem;font-size:1rem}
