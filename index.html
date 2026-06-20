@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EVO — The region's largest EV charging network</title>
+  <meta name="description" content="EVO is the largest EV charging network in the region — powering up to 200,000 charging sessions a month. Find chargers, scan, charge and pay in one app." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Mulish:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="brand" aria-label="EVO home">
+        <svg class="brand__mark" viewBox="58 5 50 50" aria-hidden="true">
+          <path d="M71.25 47.5L77.5 37.5H73.75V30L67.5 40H71.25V47.5ZM65 25H80V12.5H65V25ZM65 47.5H80V30H65V47.5ZM60 52.5V7.5H85V30H92.5V48.75H98.125V22.5H95V15H96.25V11.25H98.75V15H101.25V11.25H103.75V15H105V22.5H101.875V52.5H88.75V33.75H85V52.5H60ZM80 47.5H65H80Z" />
+        </svg>
+        <span class="brand__word">EVO</span>
+      </a>
+
+      <nav class="nav__links" id="navLinks">
+        <a href="#network" data-i18n="nav.network">Network</a>
+        <a href="#features" data-i18n="nav.features">Features</a>
+        <a href="#how" data-i18n="nav.how">How it works</a>
+        <a href="#app" data-i18n="nav.app">The App</a>
+        <a href="#business" data-i18n="nav.business">For Business</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+          <span data-lang-label>العربية</span>
+        </button>
+        <a href="#app" class="btn btn--solid btn--sm" data-i18n="nav.download">Get the app</a>
+        <button class="nav__burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero__glow"></div>
+      <div class="hero__grid container">
+        <div class="hero__copy reveal">
+          <span class="pill" data-i18n="hero.pill">#1 EV charging network in the region</span>
+          <h1 class="hero__title" data-i18n="hero.title">Charge anywhere. Powered by the region's largest EV network.</h1>
+          <p class="hero__sub" data-i18n="hero.sub">From a single app — find a charger, scan, charge and pay. EVO powers up to <strong>200,000 charging sessions every month</strong>, and is one of the largest EV charging networks in the world.</p>
+          <div class="hero__cta">
+            <a href="#app" class="btn btn--solid" data-i18n="hero.cta1">Download EVO</a>
+            <a href="#network" class="btn btn--ghost" data-i18n="hero.cta2">Explore the network</a>
+          </div>
+          <div class="hero__trust">
+            <div><b data-counter="200000" data-suffix="K+" data-suffix-ar=" ألف+" data-divide="1000">200K+</b><span data-i18n="hero.stat1">sessions / month</span></div>
+            <div><b>AC · DC</b><span data-i18n="hero.stat2">fast charging</span></div>
+            <div><b>AR · EN</b><span data-i18n="hero.stat3">built bilingual</span></div>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal">
+          <div class="phone">
+            <div class="phone__notch"></div>
+            <div class="phone__screen">
+              <div class="pscreen-top">
+                <span class="pscreen-hi" data-i18n="phone.greeting">Good evening</span>
+                <span class="pscreen-balance"><i data-i18n="phone.balance">Wallet</i><b>24.50 JD</b></span>
+              </div>
+              <div class="pscreen-map">
+                <span class="pin pin--a"></span>
+                <span class="pin pin--b"></span>
+                <span class="pin pin--c"></span>
+                <span class="pulse"></span>
+              </div>
+              <div class="pscreen-session">
+                <div class="ps-row"><span data-i18n="phone.charging">Charging now</span><b class="live"><i></i><span data-i18n="phone.live">Live</span></b></div>
+                <div class="ps-bar"><span></span></div>
+                <div class="ps-stats">
+                  <div><b>32<small> kW</small></b><span data-i18n="phone.power">Power</span></div>
+                  <div><b>18.4<small> kWh</small></b><span data-i18n="phone.energy">Energy</span></div>
+                  <div><b>74<small>%</small></b><span data-i18n="phone.soc">Battery</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="floaty floaty--1"><b>QR</b><span data-i18n="float.scan">Scan &amp; charge</span></div>
+          <div class="floaty floaty--2"><b>+120</b><span data-i18n="float.points">EVO points</span></div>
+        </div>
+      </div>
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span data-i18n="marquee.0">Real-time availability</span><span>•</span>
+          <span data-i18n="marquee.1">QR one-tap charging</span><span>•</span>
+          <span data-i18n="marquee.2">CCS · Type 2 · CHAdeMO</span><span>•</span>
+          <span data-i18n="marquee.3">Smart wallet</span><span>•</span>
+          <span data-i18n="marquee.4">Loyalty rewards</span><span>•</span>
+          <span data-i18n="marquee.5">CarPlay &amp; Android Auto</span><span>•</span>
+          <span data-i18n="marquee.0">Real-time availability</span><span>•</span>
+          <span data-i18n="marquee.1">QR one-tap charging</span><span>•</span>
+          <span data-i18n="marquee.2">CCS · Type 2 · CHAdeMO</span><span>•</span>
+          <span data-i18n="marquee.3">Smart wallet</span><span>•</span>
+          <span data-i18n="marquee.4">Loyalty rewards</span><span>•</span>
+          <span data-i18n="marquee.5">CarPlay &amp; Android Auto</span><span>•</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATS / NETWORK ============ -->
+    <section class="network" id="network">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow" data-i18n="network.eyebrow">The network</span>
+          <h2 data-i18n="network.title">Built at the scale of a region on the move</h2>
+          <p data-i18n="network.sub">EVO connects drivers to a fast-growing grid of AC and DC chargers across the region — engineered for reliability, real-time visibility and effortless payment.</p>
+        </div>
+        <div class="stat-grid reveal">
+          <div class="stat-card">
+            <b data-counter="200000" data-suffix="K+" data-suffix-ar=" ألف+" data-divide="1000">200K+</b>
+            <span data-i18n="network.s1">Charging sessions every month</span>
+          </div>
+          <div class="stat-card">
+            <b data-i18n="network.s2v">#1</b>
+            <span data-i18n="network.s2">Largest EV network in the region</span>
+          </div>
+          <div class="stat-card">
+            <b>AC · DC</b>
+            <span data-i18n="network.s3">From overnight AC to high-power DC fast charging</span>
+          </div>
+          <div class="stat-card">
+            <b>24/7</b>
+            <span data-i18n="network.s4">Live availability &amp; in-app support</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURES ============ -->
+    <section class="features" id="features">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow" data-i18n="features.eyebrow">One app, everything</span>
+          <h2 data-i18n="features.title">Your smart EV charging companion</h2>
+          <p data-i18n="features.sub">Every step of the journey — discovery, charging, payment and rewards — lives in one beautifully simple app.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature reveal">
+            <div class="feature__ico">🗺️</div>
+            <h3 data-i18n="f.map.t">Find chargers in real time</h3>
+            <p data-i18n="f.map.d">An interactive map shows every nearby station with live availability, connector types, power levels and pricing — filter to match your car.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature__ico">⚡</div>
+            <h3 data-i18n="f.qr.t">One-tap QR charging</h3>
+            <p data-i18n="f.qr.d">Scan the charger's QR code, pick your amount and start charging in seconds — no card, no kiosk, no waiting.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature__ico">👛</div>
+            <h3 data-i18n="f.wallet.t">Smart wallet &amp; local payments</h3>
+            <p data-i18n="f.wallet.d">Top up instantly and pay with the methods you already use — Zain Cash, Dinarak, CliQ, UWallet, Orange Money and more — plus vouchers and promo codes.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature__ico">📊</div>
+            <h3 data-i18n="f.live.t">Live session monitoring</h3>
+            <p data-i18n="f.live.d">Watch power, energy, cost and battery percentage update in real time — even on your lock screen, CarPlay or Android Auto.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature__ico">🎁</div>
+            <h3 data-i18n="f.loyalty.t">EVO points &amp; rewards</h3>
+            <p data-i18n="f.loyalty.d">Earn points every time you charge, unlock bonuses for off-peak charging, and redeem rewards from a growing catalog.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature__ico">🚗</div>
+            <h3 data-i18n="f.garage.t">My Garage</h3>
+            <p data-i18n="f.garage.d">Add your vehicles, see compatible connectors automatically, and track energy, cost and history per car.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature__ico">⏳</div>
+            <h3 data-i18n="f.queue.t">Smart queue</h3>
+            <p data-i18n="f.queue.d">Busy station? Join the queue and get notified the moment a charger frees up, with your position and estimated wait.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature__ico">🔌</div>
+            <h3 data-i18n="f.networks.t">Exclusive networks</h3>
+            <p data-i18n="f.networks.d">Unlock partner and members-only networks with dedicated stations, pricing and wallets — all in the same app.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature__ico">🌍</div>
+            <h3 data-i18n="f.lang.t">Truly bilingual</h3>
+            <p data-i18n="f.lang.d">A fully localized experience in Arabic and English with right-to-left support and bilingual notifications.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="how" id="how">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow" data-i18n="how.eyebrow">Simple by design</span>
+          <h2 data-i18n="how.title">Charge in four easy steps</h2>
+        </div>
+        <div class="steps">
+          <div class="step reveal"><span class="step__n">1</span><h3 data-i18n="how.1t">Find</h3><p data-i18n="how.1d">Open the map and pick an available charger that fits your car.</p></div>
+          <div class="step reveal"><span class="step__n">2</span><h3 data-i18n="how.2t">Plug &amp; scan</h3><p data-i18n="how.2d">Connect the cable and scan the QR code on the charger.</p></div>
+          <div class="step reveal"><span class="step__n">3</span><h3 data-i18n="how.3t">Charge</h3><p data-i18n="how.3d">Start charging and follow your session live in the app.</p></div>
+          <div class="step reveal"><span class="step__n">4</span><h3 data-i18n="how.4t">Pay &amp; earn</h3><p data-i18n="how.4d">Pay from your wallet and collect EVO points automatically.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ IN-CAR ============ -->
+    <section class="incar">
+      <div class="container incar__grid">
+        <div class="reveal">
+          <span class="eyebrow eyebrow--light" data-i18n="incar.eyebrow">On the road</span>
+          <h2 data-i18n="incar.title">EVO comes with you — on CarPlay &amp; Android Auto</h2>
+          <p data-i18n="incar.sub">See live prices, nearby stations and your active session right on your car's screen. Navigate to the nearest available charger without touching your phone.</p>
+          <ul class="ticks">
+            <li data-i18n="incar.1">Live tariff &amp; nearby chargers on the dashboard</li>
+            <li data-i18n="incar.2">Active session at a glance</li>
+            <li data-i18n="incar.3">One-tap navigation to the charger</li>
+          </ul>
+        </div>
+        <div class="incar__art reveal" aria-hidden="true">
+          <div class="dash">
+            <div class="dash__row"><span data-i18n="incar.price">Now</span><b>0.085 JD / kWh</b></div>
+            <div class="dash__tiles">
+              <div class="dash__tile"><b>2</b><span>1.2 km</span></div>
+              <div class="dash__tile"><b>4</b><span>3.0 km</span></div>
+              <div class="dash__tile"><b>6</b><span>5.5 km</span></div>
+            </div>
+            <div class="dash__nav" data-i18n="incar.navto">Navigate →</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ APP / DOWNLOAD ============ -->
+    <section class="app" id="app">
+      <div class="container app__inner reveal">
+        <div class="app__copy">
+          <span class="eyebrow" data-i18n="app.eyebrow">Get started</span>
+          <h2 data-i18n="app.title">Download EVO and charge with confidence</h2>
+          <p data-i18n="app.sub">Join the drivers powering hundreds of thousands of charging sessions across the region every month. Free to download — your charger is minutes away.</p>
+          <div class="store-row">
+            <a class="store" href="https://apps.apple.com/app/id6478497625" target="_blank" rel="noopener">
+              <span class="store__ico"></span>
+              <span class="store__txt"><small data-i18n="app.ios.s">Download on the</small><b>App Store</b></span>
+            </a>
+            <a class="store" href="https://play.google.com/store/apps/details?id=com.evoapp.org" target="_blank" rel="noopener">
+              <span class="store__ico store__ico--play"></span>
+              <span class="store__txt"><small data-i18n="app.and.s">Get it on</small><b>Google Play</b></span>
+            </a>
+          </div>
+          <p class="app__note" data-i18n="app.note">Available in Arabic &amp; English · iOS &amp; Android · CarPlay &amp; Android Auto</p>
+        </div>
+        <div class="app__qr">
+          <div class="qr-card">
+            <div class="qr-box" id="qrBox" aria-hidden="true"></div>
+            <span data-i18n="app.qr">Scan to download</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BUSINESS ============ -->
+    <section class="business" id="business">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow eyebrow--light" data-i18n="biz.eyebrow">For operators &amp; site hosts</span>
+          <h2 data-i18n="biz.title">The platform behind the network</h2>
+          <p data-i18n="biz.sub">EVO is more than an app. It's a full charging management platform — OCPP-native, cloud-scale and ready to run your sites with real-time control, billing and AI-driven forecasting.</p>
+        </div>
+        <div class="biz-grid">
+          <article class="biz reveal"><h3 data-i18n="biz.1t">OCPP-native CSMS</h3><p data-i18n="biz.1d">Manage chargers from any compliant vendor with remote start/stop, smart power limiting and live diagnostics.</p></article>
+          <article class="biz reveal"><h3 data-i18n="biz.2t">Operator dashboards</h3><p data-i18n="biz.2d">Monitor utilization, uptime, revenue and sessions across every site from one back office.</p></article>
+          <article class="biz reveal"><h3 data-i18n="biz.3t">Billing &amp; tariffs</h3><p data-i18n="biz.3d">Flexible time-based tariffs, wallets, vouchers and local payment rails built for the region.</p></article>
+          <article class="biz reveal"><h3 data-i18n="biz.4t">AI forecasting</h3><p data-i18n="biz.4d">Demand and load forecasting helps you plan capacity and keep chargers available when drivers need them.</p></article>
+        </div>
+        <div class="biz-cta reveal">
+          <a href="mailto:info@evoapp.org" class="btn btn--solid" data-i18n="biz.cta">Partner with EVO</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="faq" id="faq">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow" data-i18n="faq.eyebrow">Good to know</span>
+          <h2 data-i18n="faq.title">Frequently asked questions</h2>
+        </div>
+        <div class="faq-list reveal" id="faqList">
+          <details class="qa"><summary data-i18n="faq.q1">How do I start charging with EVO?</summary><p data-i18n="faq.a1">Download the app, top up your wallet, find a charger on the map, plug in and scan the QR code on the charger. Your session starts in seconds.</p></details>
+          <details class="qa"><summary data-i18n="faq.q2">Which connectors and charger types are supported?</summary><p data-i18n="faq.a2">EVO supports both AC and DC charging across common connectors including CCS, Type 2 and CHAdeMO. The app shows which chargers match your vehicle.</p></details>
+          <details class="qa"><summary data-i18n="faq.q3">How do I pay?</summary><p data-i18n="faq.a3">Charging is paid from your in-app wallet. You can top up with popular local methods such as Zain Cash, Dinarak, CliQ, UWallet and Orange Money, and apply vouchers or promo codes.</p></details>
+          <details class="qa"><summary data-i18n="faq.q4">What are EVO points?</summary><p data-i18n="faq.a4">EVO points are loyalty rewards you earn every time you charge. Collect them and redeem rewards from the in-app catalog.</p></details>
+          <details class="qa"><summary data-i18n="faq.q5">Is EVO available in Arabic?</summary><p data-i18n="faq.a5">Yes. EVO is fully bilingual in Arabic and English with right-to-left support and bilingual notifications.</p></details>
+          <details class="qa"><summary data-i18n="faq.q6">Can I use EVO in my car?</summary><p data-i18n="faq.a6">Yes. EVO works with Apple CarPlay and Android Auto, showing live prices, nearby stations and your active session on your car's screen.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA BAND ============ -->
+    <section class="cta-band">
+      <div class="container cta-band__inner reveal">
+        <h2 data-i18n="cta.title">Ready to drive on EVO?</h2>
+        <a href="#app" class="btn btn--light" data-i18n="cta.btn">Get the app</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#top" class="brand brand--light">
+          <svg class="brand__mark" viewBox="58 5 50 50" aria-hidden="true"><path d="M71.25 47.5L77.5 37.5H73.75V30L67.5 40H71.25V47.5ZM65 25H80V12.5H65V25ZM65 47.5H80V30H65V47.5ZM60 52.5V7.5H85V30H92.5V48.75H98.125V22.5H95V15H96.25V11.25H98.75V15H101.25V11.25H103.75V15H105V22.5H101.875V52.5H88.75V33.75H85V52.5H60ZM80 47.5H65H80Z" /></svg>
+          <span class="brand__word">EVO</span>
+        </a>
+        <p data-i18n="footer.tag">The region's largest EV charging network — powering up to 200,000 sessions a month.</p>
+      </div>
+      <div class="footer__col">
+        <h4 data-i18n="footer.product">Product</h4>
+        <a href="#features" data-i18n="nav.features">Features</a>
+        <a href="#how" data-i18n="nav.how">How it works</a>
+        <a href="#app" data-i18n="nav.app">The App</a>
+        <a href="#network" data-i18n="nav.network">Network</a>
+      </div>
+      <div class="footer__col">
+        <h4 data-i18n="footer.company">Company</h4>
+        <a href="#business" data-i18n="nav.business">For Business</a>
+        <a href="mailto:info@evoapp.org" data-i18n="footer.contact">Contact</a>
+        <a href="https://api.evoapp.org/assets/static/privacy-policy.html" target="_blank" rel="noopener" data-i18n="footer.privacy">Privacy Policy</a>
+      </div>
+      <div class="footer__col">
+        <h4 data-i18n="footer.get">Get the app</h4>
+        <a href="https://apps.apple.com/app/id6478497625" target="_blank" rel="noopener">App Store</a>
+        <a href="https://play.google.com/store/apps/details?id=com.evoapp.org" target="_blank" rel="noopener">Google Play</a>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span data-i18n="footer.rights">© 2026 EVO — إيفو. All rights reserved.</span>
+      <span data-i18n="footer.made">Made for the region, in Jordan 🇯🇴</span>
+    </div>
+  </footer>
+
+  <script src="i18n.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

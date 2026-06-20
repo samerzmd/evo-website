@@ -1,0 +1,141 @@
+(function () {
+  "use strict";
+  var dict = window.EVO_I18N || { en: {}, ar: {} };
+
+  /* ---------- language ---------- */
+  var saved = null;
+  try { saved = localStorage.getItem("evo_lang"); } catch (e) {}
+  var lang = saved || (navigator.language && navigator.language.indexOf("ar") === 0 ? "ar" : "en");
+
+  function applyLang(l) {
+    lang = l;
+    var html = document.documentElement;
+    html.setAttribute("lang", l);
+    html.setAttribute("dir", l === "ar" ? "rtl" : "ltr");
+    var table = dict[l] || {};
+    document.querySelectorAll("[data-i18n]").forEach(function (el) {
+      var key = el.getAttribute("data-i18n");
+      if (table[key] != null) el.innerHTML = table[key];
+    });
+    // toggle button shows the OTHER language
+    var label = document.querySelector("[data-lang-label]");
+    if (label) label.textContent = l === "ar" ? "English" : "العربية";
+    try { localStorage.setItem("evo_lang", l); } catch (e) {}
+    runCounters(true); // re-render numbers in correct numerals
+  }
+
+  var toggle = document.getElementById("langToggle");
+  if (toggle) toggle.addEventListener("click", function () {
+    applyLang(lang === "ar" ? "en" : "ar");
+  });
+
+  /* ---------- mobile nav ---------- */
+  var burger = document.getElementById("burger");
+  var navLinks = document.getElementById("navLinks");
+  if (burger && navLinks) {
+    burger.addEventListener("click", function () { navLinks.classList.toggle("open"); });
+    navLinks.querySelectorAll("a").forEach(function (a) {
+      a.addEventListener("click", function () { navLinks.classList.remove("open"); });
+    });
+  }
+
+  /* ---------- sticky nav shadow ---------- */
+  var nav = document.getElementById("nav");
+  window.addEventListener("scroll", function () {
+    if (nav) nav.classList.toggle("scrolled", window.scrollY > 8);
+  }, { passive: true });
+
+  /* ---------- reveal on scroll ---------- */
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll(".reveal").forEach(function (el, i) {
+    el.style.transitionDelay = (Math.min(i % 4, 3) * 0.08) + "s";
+    io.observe(el);
+  });
+
+  /* ---------- animated counters (Arabic-aware numerals) ---------- */
+  var counterEls = Array.prototype.slice.call(document.querySelectorAll("[data-counter]"));
+  var counted = false;
+  function toNumerals(str) {
+    if (lang !== "ar") return str;
+    var map = { "0":"٠","1":"١","2":"٢","3":"٣","4":"٤","5":"٥","6":"٦","7":"٧","8":"٨","9":"٩" };
+    return String(str).replace(/[0-9]/g, function (d) { return map[d]; });
+  }
+  function renderCounter(el, val) {
+    var suffix = (lang === "ar" && el.getAttribute("data-suffix-ar")) || el.getAttribute("data-suffix") || "";
+    el.textContent = toNumerals(Math.round(val).toLocaleString("en-US")) + suffix;
+  }
+  function runCounters(forceFinal) {
+    counterEls.forEach(function (el) {
+      var target = parseFloat(el.getAttribute("data-counter"));
+      var divide = parseFloat(el.getAttribute("data-divide")) || 1;
+      var finalVal = target / divide;
+      if (forceFinal) { renderCounter(el, finalVal); return; }
+      var start = null, dur = 1600;
+      function step(ts) {
+        if (!start) start = ts;
+        var p = Math.min((ts - start) / dur, 1);
+        var eased = 1 - Math.pow(1 - p, 3);
+        renderCounter(el, finalVal * eased);
+        if (p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  }
+  var statBand = document.querySelector(".network") || document.body;
+  var co = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (en.isIntersecting && !counted) { counted = true; runCounters(false); }
+    });
+  }, { threshold: 0.3 });
+  if (statBand) co.observe(statBand);
+
+  /* ---------- lightweight QR placeholder (deterministic grid) ---------- */
+  function drawQR(box) {
+    if (!box) return;
+    var n = 21, cell = 8, pad = 3;
+    var svgNS = "http://www.w3.org/2000/svg";
+    var svg = document.createElementNS(svgNS, "svg");
+    var size = n * cell + pad * 2 * cell;
+    svg.setAttribute("viewBox", "0 0 " + size + " " + size);
+    svg.setAttribute("width", "100%"); svg.setAttribute("height", "100%");
+    var bg = document.createElementNS(svgNS, "rect");
+    bg.setAttribute("width", size); bg.setAttribute("height", size); bg.setAttribute("fill", "#fff");
+    svg.appendChild(bg);
+    // pseudo-random but fixed pattern (looks like a QR; not scannable — decorative)
+    var seed = 7;
+    function rnd() { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; }
+    function finder(ox, oy) {
+      [[0,0,7,"#0c4543"],[1,1,5,"#fff"],[2,2,3,"#0c4543"]].forEach(function (f) {
+        var r = document.createElementNS(svgNS, "rect");
+        r.setAttribute("x", (ox + f[0] + pad) * cell);
+        r.setAttribute("y", (oy + f[1] + pad) * cell);
+        r.setAttribute("width", f[2] * cell); r.setAttribute("height", f[2] * cell);
+        r.setAttribute("fill", f[3]); r.setAttribute("rx", 2);
+        svg.appendChild(r);
+      });
+    }
+    for (var y = 0; y < n; y++) {
+      for (var x = 0; x < n; x++) {
+        var inFinder = (x < 8 && y < 8) || (x > n - 9 && y < 8) || (x < 8 && y > n - 9);
+        if (inFinder) continue;
+        if (rnd() > 0.55) {
+          var c = document.createElementNS(svgNS, "rect");
+          c.setAttribute("x", (x + pad) * cell); c.setAttribute("y", (y + pad) * cell);
+          c.setAttribute("width", cell); c.setAttribute("height", cell);
+          c.setAttribute("fill", rnd() > 0.4 ? "#0c4543" : "#0d7956");
+          svg.appendChild(c);
+        }
+      }
+    }
+    finder(0, 0); finder(n - 7, 0); finder(0, n - 7);
+    box.appendChild(svg);
+  }
+  drawQR(document.getElementById("qrBox"));
+
+  /* ---------- init ---------- */
+  applyLang(lang);
+})();
