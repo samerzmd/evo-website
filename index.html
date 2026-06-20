@@ -8,15 +8,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Mulish:wght@400;600;700;800&family=Noto+Sans+SC:wght@400;500;700;800&family=Noto+Sans+Thai:wght@400;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="icon" type="image/png" href="assets/evo-icon.png?v=9" />
-  <link rel="stylesheet" href="styles.css?v=9" />
+  <link rel="icon" type="image/png" href="assets/evo-icon.png?v=14" />
+  <link rel="stylesheet" href="styles.css?v=14" />
 </head>
 <body>
   <!-- ============ NAV ============ -->
   <header class="nav" id="nav">
     <div class="container nav__inner">
       <a href="#top" class="brand" aria-label="EVO — Always Connected, Always Charged">
-        <img class="brand__logo" src="assets/evo-logo.png?v=9" alt="EVO — Always Connected, Always Charged" />
+        <img class="brand__logo" src="assets/evo-logo.png?v=14" alt="EVO — Always Connected, Always Charged" />
       </a>
 
       <nav class="nav__links" id="navLinks">
@@ -161,12 +161,92 @@
           <p data-i18n="global.sub">EVO's success at home is just the start. The very platform that already powers up to 200,000 sessions a month in Jordan is architected from the ground up to cross borders — ready to roll out across new countries, currencies, languages and operators on one cloud-native core.</p>
         </div>
         <div class="global-grid reveal">
-          <article class="gcard"><div class="gcard__ico">🌍</div><h3 data-i18n="g.1t">Multi-country by design</h3><p data-i18n="g.1d">A cloud-native, OCPP-standard core that expands into new countries and regions without re-platforming.</p></article>
-          <article class="gcard"><div class="gcard__ico">💱</div><h3 data-i18n="g.2t">Any currency &amp; payment rail</h3><p data-i18n="g.2d">Localized tariffs, wallets and payment methods — plug in each market's preferred currencies and rails.</p></article>
-          <article class="gcard"><div class="gcard__ico">🗣️</div><h3 data-i18n="g.3t">Any language, any direction</h3><p data-i18n="g.3d">Full localization with right-to-left and left-to-right support — already bilingual, ready for many more.</p></article>
-          <article class="gcard"><div class="gcard__ico">🤝</div><h3 data-i18n="g.4t">Multi-operator &amp; roaming-ready</h3><p data-i18n="g.4d">Run many networks, operators and partners on one platform — built to interconnect and roam across markets.</p></article>
+          <article class="gcard"><div class="gcard__ico" data-icon="flag"></div><h3 data-i18n="g.1t">Multi-country by design</h3><p data-i18n="g.1d">A cloud-native, OCPP-standard core that expands into new countries and regions without re-platforming.</p></article>
+          <article class="gcard"><div class="gcard__ico" data-icon="coins"></div><h3 data-i18n="g.2t">Any currency &amp; payment rail</h3><p data-i18n="g.2d">Localized tariffs, wallets and payment methods — plug in each market's preferred currencies and rails.</p></article>
+          <article class="gcard"><div class="gcard__ico" data-icon="translate"></div><h3 data-i18n="g.3t">Any language, any direction</h3><p data-i18n="g.3d">Full localization with right-to-left and left-to-right support — already bilingual, ready for many more.</p></article>
+          <article class="gcard"><div class="gcard__ico" data-icon="roaming"></div><h3 data-i18n="g.4t">Multi-operator &amp; roaming-ready</h3><p data-i18n="g.4d">Run many networks, operators and partners on one platform — built to interconnect and roam across markets.</p></article>
         </div>
         <p class="global-note reveal" data-i18n="global.note">White-label ready · OCPP 1.6 &amp; 2.0.1 · Cloud-scale · 25+ charger brands · All connector standards</p>
+      </div>
+    </section>
+
+    <!-- ============ PERSONAS ============ -->
+    <section class="personas" id="personas">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow" data-i18n="per.eyebrow">Who it's for</span>
+          <h2 data-i18n="per.title">One platform, tailored to everyone in the EV ecosystem</h2>
+          <p data-i18n="per.sub">Whether you drive an EV, own a single station, or run a national network of hubs — EVO gives each role its own purpose-built experience.</p>
+        </div>
+
+        <div class="ptabs reveal" role="tablist">
+          <button class="ptab is-active" role="tab" aria-selected="true" data-ptab="driver"><span class="ptab__ico" data-icon="car"></span><span data-i18n="per.driver.tab">EV Driver</span></button>
+          <button class="ptab" role="tab" aria-selected="false" data-ptab="network"><span class="ptab__ico" data-icon="buildings"></span><span data-i18n="per.network.tab">Charging Network</span></button>
+          <button class="ptab" role="tab" aria-selected="false" data-ptab="owner"><span class="ptab__ico" data-icon="station"></span><span data-i18n="per.owner.tab">Hub Owner</span></button>
+          <button class="ptab" role="tab" aria-selected="false" data-ptab="fleet"><span class="ptab__ico" data-icon="truck"></span><span data-i18n="per.fleet.tab">Fleet Operator</span></button>
+        </div>
+
+        <div class="ppanels reveal">
+          <div class="ppanel is-active" role="tabpanel" data-ppanel="driver">
+            <div class="ppanel__intro">
+              <h3 data-i18n="per.driver.t">For EV Drivers</h3>
+              <p data-i18n="per.driver.d">Find, charge and pay in one beautifully simple app — at any EVO charger across the network.</p>
+              <a href="#app" class="btn btn--solid" data-i18n="per.driver.cta">Download EVO</a>
+            </div>
+            <ul class="ppanel__list">
+              <li data-i18n="per.driver.1">Find chargers on a live map with real-time availability, connector types and prices</li>
+              <li data-i18n="per.driver.2">Start charging in seconds — just scan the QR code, no card or kiosk</li>
+              <li data-i18n="per.driver.3">Pay from a smart wallet with local methods, vouchers and promo codes</li>
+              <li data-i18n="per.driver.4">Follow every session live — power, energy, cost and battery %</li>
+              <li data-i18n="per.driver.5">Earn EVO points, join the queue, manage your garage, use CarPlay &amp; Android Auto</li>
+            </ul>
+          </div>
+
+          <div class="ppanel" role="tabpanel" data-ppanel="network">
+            <div class="ppanel__intro">
+              <h3 data-i18n="per.network.t">For Charging Networks &amp; Chains</h3>
+              <p data-i18n="per.network.d">Run dozens or hundreds of hubs from one cloud platform — with dedicated tools for your operations, maintenance and finance teams.</p>
+              <a href="#contact" class="btn btn--solid" data-i18n="per.network.cta">Talk to our team</a>
+            </div>
+            <ul class="ppanel__list">
+              <li data-i18n="per.network.1">Monitor every charger across all your sites in real time from one console</li>
+              <li data-i18n="per.network.2">Role-based dashboards for operations, maintenance and finance teams</li>
+              <li data-i18n="per.network.3">Automated fault &amp; maintenance reporting with anomaly detection for maximum uptime</li>
+              <li data-i18n="per.network.4">Granular financial, operational and utilization reporting, ready for finance</li>
+              <li data-i18n="per.network.5">Manage staff shifts, tariffs, fleets, promotions and AI load forecasting at scale</li>
+            </ul>
+          </div>
+
+          <div class="ppanel" role="tabpanel" data-ppanel="owner">
+            <div class="ppanel__intro">
+              <h3 data-i18n="per.owner.t">For Single Hub Owners</h3>
+              <p data-i18n="per.owner.d">Launch and run your charging station with no platform to build — and instantly reach drivers already charging on EVO.</p>
+              <a href="#contact" class="btn btn--solid" data-i18n="per.owner.cta">Become a host</a>
+            </div>
+            <ul class="ppanel__list">
+              <li data-i18n="per.owner.1">Connect chargers from any of 25+ supported brands — no vendor lock-in</li>
+              <li data-i18n="per.owner.2">Get listed in the EVO driver app and tap into 200,000+ sessions a month</li>
+              <li data-i18n="per.owner.3">Accept payments instantly — wallet, cards and local methods, settled to you</li>
+              <li data-i18n="per.owner.4">Set your own tariffs and shifts, all from one simple dashboard</li>
+              <li data-i18n="per.owner.5">Automatic maintenance alerts and clear reports — no tech team required</li>
+            </ul>
+          </div>
+
+          <div class="ppanel" role="tabpanel" data-ppanel="fleet">
+            <div class="ppanel__intro">
+              <h3 data-i18n="per.fleet.t">For Fleet Operators</h3>
+              <p data-i18n="per.fleet.d">Electrify and manage your fleet's charging — with pooled billing, access control and full visibility of energy and cost.</p>
+              <a href="#contact" class="btn btn--solid" data-i18n="per.fleet.cta">Talk to our team</a>
+            </div>
+            <ul class="ppanel__list">
+              <li data-i18n="per.fleet.1">Onboard fleet accounts, vehicles and drivers with assigned access</li>
+              <li data-i18n="per.fleet.2">Pool billing across the fleet with consolidated, exportable statements</li>
+              <li data-i18n="per.fleet.3">Track energy, cost and activity per vehicle and per driver</li>
+              <li data-i18n="per.fleet.4">Charge across the public EVO network and your own depots in one place</li>
+              <li data-i18n="per.fleet.5">Dedicated fleet dashboards with the reports your finance team needs</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -180,62 +260,62 @@
         </div>
         <div class="feature-grid">
           <article class="feature reveal">
-            <div class="feature__ico">🗺️</div>
+            <div class="feature__ico" data-icon="map"></div>
             <h3 data-i18n="f.map.t">Find chargers in real time</h3>
             <p data-i18n="f.map.d">An interactive map shows every nearby station with live availability, connector types, power levels and pricing — filter to match your car.</p>
           </article>
           <article class="feature reveal">
-            <div class="feature__ico">⚡</div>
+            <div class="feature__ico" data-icon="qr"></div>
             <h3 data-i18n="f.qr.t">One-tap QR charging</h3>
             <p data-i18n="f.qr.d">Scan the charger's QR code, pick your amount and start charging in seconds — no card, no kiosk, no waiting.</p>
           </article>
           <article class="feature reveal">
-            <div class="feature__ico">👛</div>
+            <div class="feature__ico" data-icon="wallet"></div>
             <h3 data-i18n="f.wallet.t">Smart wallet &amp; local payments</h3>
             <p data-i18n="f.wallet.d">Top up instantly and pay with the methods you already use — Zain Cash, Dinarak, CliQ, UWallet, Orange Money and more — plus vouchers and promo codes.</p>
           </article>
           <article class="feature reveal">
-            <div class="feature__ico">📊</div>
+            <div class="feature__ico" data-icon="activity"></div>
             <h3 data-i18n="f.live.t">Live session monitoring</h3>
             <p data-i18n="f.live.d">Watch power, energy, cost and battery percentage update in real time — even on your lock screen, CarPlay or Android Auto.</p>
           </article>
           <article class="feature reveal">
-            <div class="feature__ico">🎁</div>
+            <div class="feature__ico" data-icon="award"></div>
             <h3 data-i18n="f.loyalty.t">EVO points &amp; rewards</h3>
             <p data-i18n="f.loyalty.d">Earn points every time you charge, unlock bonuses for off-peak charging, and redeem rewards from a growing catalog.</p>
           </article>
           <article class="feature reveal">
-            <div class="feature__ico">🚗</div>
+            <div class="feature__ico" data-icon="car"></div>
             <h3 data-i18n="f.garage.t">My Garage</h3>
             <p data-i18n="f.garage.d">Add your vehicles, see compatible connectors automatically, and track energy, cost and history per car.</p>
           </article>
           <article class="feature reveal">
-            <div class="feature__ico">⏳</div>
+            <div class="feature__ico" data-icon="clock"></div>
             <h3 data-i18n="f.queue.t">Smart queue</h3>
             <p data-i18n="f.queue.d">Busy station? Join the queue and get notified the moment a charger frees up, with your position and estimated wait.</p>
           </article>
           <article class="feature reveal">
-            <div class="feature__ico">🔌</div>
+            <div class="feature__ico" data-icon="nodes"></div>
             <h3 data-i18n="f.networks.t">Exclusive networks</h3>
             <p data-i18n="f.networks.d">Unlock partner and members-only networks with dedicated stations, pricing and wallets — all in the same app.</p>
           </article>
           <article class="feature reveal">
-            <div class="feature__ico">📡</div>
+            <div class="feature__ico" data-icon="broadcast"></div>
             <h3 data-i18n="f.status.t">Live charger status</h3>
             <p data-i18n="f.status.d">See in real time whether each charger is available, in use, offline or under maintenance — and get notified the moment your favorite station frees up.</p>
           </article>
           <article class="feature reveal">
-            <div class="feature__ico">💬</div>
+            <div class="feature__ico" data-icon="chat"></div>
             <h3 data-i18n="f.help.t">AI assistant &amp; support</h3>
             <p data-i18n="f.help.d">An in-app assistant answers your questions, guides you through charging and connects you to support — anytime, in Arabic or English.</p>
           </article>
           <article class="feature reveal">
-            <div class="feature__ico">🧾</div>
+            <div class="feature__ico" data-icon="receipt"></div>
             <h3 data-i18n="f.history.t">History &amp; receipts</h3>
             <p data-i18n="f.history.d">Every session is saved with energy, cost and location — download receipts and track your spending over time.</p>
           </article>
           <article class="feature reveal">
-            <div class="feature__ico">🌍</div>
+            <div class="feature__ico" data-icon="globe"></div>
             <h3 data-i18n="f.lang.t">Truly bilingual</h3>
             <p data-i18n="f.lang.d">A fully localized experience in Arabic and English with right-to-left support and bilingual notifications.</p>
           </article>
@@ -374,14 +454,14 @@
         </div>
 
         <div class="biz-grid">
-          <article class="biz reveal"><div class="biz__ico">🔌</div><h3 data-i18n="biz.csms.t">OCPP-native CSMS</h3><p data-i18n="biz.csms.d">Run chargers from 25+ brands with remote start/stop, smart power limiting, firmware control and live diagnostics — all open-standard.</p></article>
-          <article class="biz reveal"><div class="biz__ico">📊</div><h3 data-i18n="biz.monitor.t">Real-time monitoring</h3><p data-i18n="biz.monitor.d">A live operations view of every charger and connector — status, power, faults and utilization — across all your sites at once.</p></article>
-          <article class="biz reveal"><div class="biz__ico">🚚</div><h3 data-i18n="biz.fleet.t">Fleet management</h3><p data-i18n="biz.fleet.d">Onboard fleet accounts and vehicles, assign access, pool billing and track every fleet's energy, cost and activity with dedicated dashboards.</p></article>
-          <article class="biz reveal"><div class="biz__ico">🕑</div><h3 data-i18n="biz.shifts.t">Shifts &amp; staff</h3><p data-i18n="biz.shifts.d">Manage station shifts and attendants, with shift-based tariffs and clear handover so every site is covered around the clock.</p></article>
-          <article class="biz reveal"><div class="biz__ico">📱</div><h3 data-i18n="biz.opapp.t">Operator app</h3><p data-i18n="biz.opapp.d">A dedicated app for field teams and attendants to start sessions, take payments, check charger health and act on alerts on the ground.</p></article>
-          <article class="biz reveal"><div class="biz__ico">📈</div><h3 data-i18n="biz.report.t">Detailed reporting</h3><p data-i18n="biz.report.d">Granular financial, operational and utilization reporting — revenue, settlements, balances, sessions and trends, exportable for your finance team.</p></article>
-          <article class="biz reveal"><div class="biz__ico">🛠️</div><h3 data-i18n="biz.maint.t">Maintenance &amp; faults</h3><p data-i18n="biz.maint.d">Automatic charger error and fault reporting, anomaly detection and preventive-care scheduling keep uptime high and downtime short.</p></article>
-          <article class="biz reveal"><div class="biz__ico">🤖</div><h3 data-i18n="biz.ai.t">AI assistance &amp; forecasting</h3><p data-i18n="biz.ai.d">An AI assistant plus demand and load forecasting help you plan capacity, optimize tariffs and keep chargers available when drivers need them.</p></article>
+          <article class="biz reveal"><div class="biz__ico" data-icon="server"></div><h3 data-i18n="biz.csms.t">OCPP-native CSMS</h3><p data-i18n="biz.csms.d">Run chargers from 25+ brands with remote start/stop, smart power limiting, firmware control and live diagnostics — all open-standard.</p></article>
+          <article class="biz reveal"><div class="biz__ico" data-icon="gauge"></div><h3 data-i18n="biz.monitor.t">Real-time monitoring</h3><p data-i18n="biz.monitor.d">A live operations view of every charger and connector — status, power, faults and utilization — across all your sites at once.</p></article>
+          <article class="biz reveal"><div class="biz__ico" data-icon="truck"></div><h3 data-i18n="biz.fleet.t">Fleet management</h3><p data-i18n="biz.fleet.d">Onboard fleet accounts and vehicles, assign access, pool billing and track every fleet's energy, cost and activity with dedicated dashboards.</p></article>
+          <article class="biz reveal"><div class="biz__ico" data-icon="users"></div><h3 data-i18n="biz.shifts.t">Shifts &amp; staff</h3><p data-i18n="biz.shifts.d">Manage station shifts and attendants, with shift-based tariffs and clear handover so every site is covered around the clock.</p></article>
+          <article class="biz reveal"><div class="biz__ico" data-icon="phone"></div><h3 data-i18n="biz.opapp.t">Operator app</h3><p data-i18n="biz.opapp.d">A dedicated app for field teams and attendants to start sessions, take payments, check charger health and act on alerts on the ground.</p></article>
+          <article class="biz reveal"><div class="biz__ico" data-icon="chart"></div><h3 data-i18n="biz.report.t">Detailed reporting</h3><p data-i18n="biz.report.d">Granular financial, operational and utilization reporting — revenue, settlements, balances, sessions and trends, exportable for your finance team.</p></article>
+          <article class="biz reveal"><div class="biz__ico" data-icon="wrench"></div><h3 data-i18n="biz.maint.t">Maintenance &amp; faults</h3><p data-i18n="biz.maint.d">Automatic charger error and fault reporting, anomaly detection and preventive-care scheduling keep uptime high and downtime short.</p></article>
+          <article class="biz reveal"><div class="biz__ico" data-icon="cpu"></div><h3 data-i18n="biz.ai.t">AI assistance &amp; forecasting</h3><p data-i18n="biz.ai.d">An AI assistant plus demand and load forecasting help you plan capacity, optimize tariffs and keep chargers available when drivers need them.</p></article>
         </div>
         <div class="biz-cta reveal">
           <a href="mailto:info@evoapp.org" class="btn btn--solid" data-i18n="biz.cta">Partner with EVO</a>
@@ -407,6 +487,51 @@
       </div>
     </section>
 
+    <!-- ============ FOUNDING TEAM ============ -->
+    <section class="team" id="team">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow" data-i18n="team.eyebrow">Founding team</span>
+          <h2 data-i18n="team.title">Built by a team that has done it before</h2>
+          <p data-i18n="team.sub">EVO is founded by builders, marketers and operators with decades of combined experience scaling technology, products and businesses across the region and beyond.</p>
+        </div>
+        <div class="team-grid reveal">
+          <article class="member">
+            <a class="member__li" href="https://www.linkedin.com/in/samerzmd/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.94 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM7 8.48H3V21h4V8.48Zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91l.04-1.68Z"/></svg></a>
+            <div class="member__avatar">SA</div>
+            <h3>Samer Aldawaleeb</h3>
+            <span class="member__role" data-i18n="team.cto.role">Co-Founder &amp; CTO</span>
+            <p class="member__bio" data-i18n="team.cto.bio">A decade-plus building and scaling high-traffic platforms and AI systems, deep in cloud-native architecture and real-time engineering.</p>
+            <div class="member__cos"><span class="member__co">HungerStation</span><span class="member__co">Ninja</span><span class="member__co">BlackStone eIT</span><span class="member__co">Kaizen Plus</span><span class="member__co">CATEC</span></div>
+          </article>
+          <article class="member">
+            <a class="member__li" href="https://www.linkedin.com/in/bilal-al-bawaliz-26291018/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.94 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM7 8.48H3V21h4V8.48Zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91l.04-1.68Z"/></svg></a>
+            <div class="member__avatar">BA</div>
+            <h3>Bilal Al Bawaliz</h3>
+            <span class="member__role" data-i18n="team.cpo.role">Co-Founder &amp; CPO</span>
+            <p class="member__bio" data-i18n="team.cpo.bio">Years shipping and scaling products across fintech, logistics and mobility for the region's fastest-growing tech companies.</p>
+            <div class="member__cos"><span class="member__co">HungerStation</span><span class="member__co">Hala</span><span class="member__co">Swyft</span><span class="member__co">Johrah</span><span class="member__co">Labayh</span></div>
+          </article>
+          <article class="member">
+            <a class="member__li" href="https://www.linkedin.com/in/ibawaliz/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.94 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM7 8.48H3V21h4V8.48Zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91l.04-1.68Z"/></svg></a>
+            <div class="member__avatar">IA</div>
+            <h3>Ibrahim Al Bawaliz</h3>
+            <span class="member__role" data-i18n="team.ceo.role">Co-Founder, CEO &amp; CMO</span>
+            <p class="member__bio" data-i18n="team.ceo.bio">A decade of brand and growth marketing across delivery, telecom, tourism, edtech and gaming.</p>
+            <div class="member__cos"><span class="member__co">HungerStation</span><span class="member__co">MRSOOL</span><span class="member__co">stc</span><span class="member__co">Saudi Tourism Authority</span><span class="member__co">Jawaker</span></div>
+          </article>
+          <article class="member">
+            <a class="member__li" href="https://www.linkedin.com/in/laythalkhateeb/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.94 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM7 8.48H3V21h4V8.48Zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91l.04-1.68Z"/></svg></a>
+            <div class="member__avatar">LA</div>
+            <h3>Layth Alkhateeb</h3>
+            <span class="member__role" data-i18n="team.coo.role">Co-Founder &amp; COO</span>
+            <p class="member__bio" data-i18n="team.coo.bio">20+ years in international operations, manufacturing and trade between the Middle East and China.</p>
+            <div class="member__cos"><span class="member__co">SCIL Machinery</span><span class="member__co">CryptCoin</span><span class="member__co">Top One Trading</span><span class="member__co">Al Ghad</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ CTA BAND ============ -->
     <section class="cta-band">
       <div class="container cta-band__inner reveal">
@@ -425,15 +550,15 @@
       <div class="contact__grid reveal">
         <div class="cinfo">
           <div class="cinfo__item">
-            <span class="cinfo__ico" aria-hidden="true">📍</span>
+            <span class="cinfo__ico" data-icon="pin" aria-hidden="true"></span>
             <div><h4 data-i18n="contact.addressT">Address</h4><p data-i18n="contact.address">Amman – Jordan</p></div>
           </div>
           <div class="cinfo__item">
-            <span class="cinfo__ico" aria-hidden="true">📞</span>
+            <span class="cinfo__ico" data-icon="phone" aria-hidden="true"></span>
             <div><h4 data-i18n="contact.phoneT">Phone Number</h4><a href="tel:+96262229436" dir="ltr">+962 6 222 9436</a></div>
           </div>
           <div class="cinfo__item">
-            <span class="cinfo__ico" aria-hidden="true">✉️</span>
+            <span class="cinfo__ico" data-icon="email" aria-hidden="true"></span>
             <div><h4 data-i18n="contact.emailT">E-mail</h4><a href="mailto:info@evoapp.org">info@evoapp.org</a></div>
           </div>
           <a class="cinfo__wa" href="https://wa.me/962798718273?text=Hello%20EVO%20%F0%9F%91%8B" target="_blank" rel="noopener">
@@ -471,7 +596,7 @@
     <div class="container footer__grid">
       <div class="footer__brand">
         <a href="#top" class="brand brand--light">
-          <img class="brand__logo" src="assets/evo-logo-white.png?v=9" alt="EVO" />
+          <img class="brand__logo" src="assets/evo-logo-white.png?v=14" alt="EVO" />
         </a>
         <p class="footer__slogan" data-i18n="footer.slogan">Always Connected, Always Charged.</p>
         <p data-i18n="footer.tag">The region's largest EV charging network — powering up to 200,000 sessions a month across Jordan.</p>
@@ -501,7 +626,7 @@
     </div>
   </footer>
 
-  <script src="i18n.js?v=9"></script>
-  <script src="script.js?v=9"></script>
+  <script src="i18n.js?v=14"></script>
+  <script src="script.js?v=14"></script>
 </body>
 </html>
