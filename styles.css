@@ -200,8 +200,21 @@ html[dir="rtl"] .marquee__track{animation-direction:reverse}
 .qr-box{width:170px;height:170px;margin-bottom:.8rem;border-radius:12px;background:#fff}
 .qr-card span{font-weight:700;color:var(--teal);font-size:.9rem}
 
+/* ===== ecosystem / interoperability ===== */
+.eco{padding:90px 0;background:var(--bg-soft)}
+.eco-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-bottom:30px}
+.eco-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 22px;text-align:center;transition:transform .25s,box-shadow .25s}
+.eco-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-sm)}
+.eco-card b{display:block;font-size:2.3rem;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:800}
+.eco-card span{color:var(--slate);font-size:.92rem;font-weight:600}
+.chips{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:16px}
+.chips__label{font-weight:800;color:var(--teal);font-size:.85rem;letter-spacing:.04em;text-transform:uppercase;margin-inline-end:6px}
+.chip{background:#fff;border:1px solid var(--line);color:var(--teal);font-weight:700;font-size:.85rem;padding:.4rem .9rem;border-radius:999px;transition:border-color .2s,background .2s}
+.chip:hover{border-color:var(--green);background:var(--bg-mint)}
+
 /* ===== business ===== */
 .business{padding:90px 0;background:var(--ink);color:#dfeeea}
+.biz__ico{width:46px;height:46px;display:grid;place-items:center;font-size:1.35rem;background:rgba(12,218,112,.12);border-radius:12px;margin-bottom:.9rem}
 .business .section-head h2{color:#fff}
 .business .section-head p{color:#a9c2bd}
 .biz-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}

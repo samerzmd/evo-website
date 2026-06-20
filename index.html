@@ -186,6 +186,21 @@
             <p data-i18n="f.networks.d">Unlock partner and members-only networks with dedicated stations, pricing and wallets — all in the same app.</p>
           </article>
           <article class="feature reveal">
+            <div class="feature__ico">📡</div>
+            <h3 data-i18n="f.status.t">Live charger status</h3>
+            <p data-i18n="f.status.d">See in real time whether each charger is available, in use, offline or under maintenance — and get notified the moment your favorite station frees up.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature__ico">💬</div>
+            <h3 data-i18n="f.help.t">AI assistant &amp; support</h3>
+            <p data-i18n="f.help.d">An in-app assistant answers your questions, guides you through charging and connects you to support — anytime, in Arabic or English.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature__ico">🧾</div>
+            <h3 data-i18n="f.history.t">History &amp; receipts</h3>
+            <p data-i18n="f.history.d">Every session is saved with energy, cost and location — download receipts and track your spending over time.</p>
+          </article>
+          <article class="feature reveal">
             <div class="feature__ico">🌍</div>
             <h3 data-i18n="f.lang.t">Truly bilingual</h3>
             <p data-i18n="f.lang.d">A fully localized experience in Arabic and English with right-to-left support and bilingual notifications.</p>
@@ -265,19 +280,53 @@
       </div>
     </section>
 
-    <!-- ============ BUSINESS ============ -->
+    <!-- ============ INTEROPERABILITY / IN-HOUSE ============ -->
+    <section class="eco">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow" data-i18n="eco.eyebrow">One network, every charger</span>
+          <h2 data-i18n="eco.title">Engineered in-house to run any charger, any connector</h2>
+          <p data-i18n="eco.sub">EVO is built and owned end-to-end by our own engineering team — no third-party platform, no vendor lock-in. That's how we run 25+ charger brands and every connector type seamlessly on a single network.</p>
+        </div>
+        <div class="eco-grid reveal">
+          <div class="eco-card"><b data-counter="25" data-suffix="+" data-divide="1">25+</b><span data-i18n="eco.brands">EV charger brands running on one network</span></div>
+          <div class="eco-card"><b data-i18n="eco.plugsV">All</b><span data-i18n="eco.plugs">Connector types supported — every standard in the world</span></div>
+          <div class="eco-card"><b data-i18n="eco.inhouseV">100%</b><span data-i18n="eco.inhouse">Designed, built &amp; operated in-house</span></div>
+          <div class="eco-card"><b>OCPP</b><span data-i18n="eco.ocpp">Open-standard, vendor-agnostic by design</span></div>
+        </div>
+        <div class="chips reveal" aria-hidden="false">
+          <span class="chips__label" data-i18n="eco.plugsLabel">Connectors</span>
+          <span class="chip">CCS1</span><span class="chip">CCS2</span><span class="chip">CHAdeMO</span>
+          <span class="chip">Type 1</span><span class="chip">Type 2</span><span class="chip">GB/T</span>
+          <span class="chip">NACS / Tesla</span><span class="chip">AC</span><span class="chip">DC</span>
+        </div>
+        <div class="chips reveal">
+          <span class="chips__label" data-i18n="eco.brandsLabel">Charger brands</span>
+          <span class="chip">ABB</span><span class="chip">Delta</span><span class="chip">Wallbox</span>
+          <span class="chip">Huawei</span><span class="chip">Grasen</span><span class="chip">Zerova</span>
+          <span class="chip">BlueSky</span><span class="chip">Benny</span><span class="chip">SparkJo</span>
+          <span class="chip">Tate</span><span class="chip" data-i18n="eco.more">+ many more</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BUSINESS / OPERATOR PLATFORM ============ -->
     <section class="business" id="business">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow eyebrow--light" data-i18n="biz.eyebrow">For operators &amp; site hosts</span>
-          <h2 data-i18n="biz.title">The platform behind the network</h2>
-          <p data-i18n="biz.sub">EVO is more than an app. It's a full charging management platform — OCPP-native, cloud-scale and ready to run your sites with real-time control, billing and AI-driven forecasting.</p>
+          <span class="eyebrow eyebrow--light" data-i18n="biz.eyebrow">For operators &amp; enterprises</span>
+          <h2 data-i18n="biz.title">A complete operating system for your charging business</h2>
+          <p data-i18n="biz.sub">Beyond the driver app, EVO is a full operator platform — manage chargers, fleets, staff, payments and maintenance, with deep reporting and AI built in. All developed in-house, OCPP-native and cloud-scale.</p>
         </div>
         <div class="biz-grid">
-          <article class="biz reveal"><h3 data-i18n="biz.1t">OCPP-native CSMS</h3><p data-i18n="biz.1d">Manage chargers from any compliant vendor with remote start/stop, smart power limiting and live diagnostics.</p></article>
-          <article class="biz reveal"><h3 data-i18n="biz.2t">Operator dashboards</h3><p data-i18n="biz.2d">Monitor utilization, uptime, revenue and sessions across every site from one back office.</p></article>
-          <article class="biz reveal"><h3 data-i18n="biz.3t">Billing &amp; tariffs</h3><p data-i18n="biz.3d">Flexible time-based tariffs, wallets, vouchers and local payment rails built for the region.</p></article>
-          <article class="biz reveal"><h3 data-i18n="biz.4t">AI forecasting</h3><p data-i18n="biz.4d">Demand and load forecasting helps you plan capacity and keep chargers available when drivers need them.</p></article>
+          <article class="biz reveal"><div class="biz__ico">🔌</div><h3 data-i18n="biz.csms.t">OCPP-native CSMS</h3><p data-i18n="biz.csms.d">Run chargers from 25+ brands with remote start/stop, smart power limiting, firmware control and live diagnostics — all open-standard.</p></article>
+          <article class="biz reveal"><div class="biz__ico">📊</div><h3 data-i18n="biz.monitor.t">Real-time monitoring</h3><p data-i18n="biz.monitor.d">A live operations view of every charger and connector — status, power, faults and utilization — across all your sites at once.</p></article>
+          <article class="biz reveal"><div class="biz__ico">🚚</div><h3 data-i18n="biz.fleet.t">Fleet management</h3><p data-i18n="biz.fleet.d">Onboard fleet accounts and vehicles, assign access, pool billing and track every fleet's energy, cost and activity with dedicated dashboards.</p></article>
+          <article class="biz reveal"><div class="biz__ico">🕑</div><h3 data-i18n="biz.shifts.t">Shifts &amp; staff</h3><p data-i18n="biz.shifts.d">Manage station shifts and attendants, with shift-based tariffs and clear handover so every site is covered around the clock.</p></article>
+          <article class="biz reveal"><div class="biz__ico">📱</div><h3 data-i18n="biz.opapp.t">Operator app</h3><p data-i18n="biz.opapp.d">A dedicated app for field teams and attendants to start sessions, take payments, check charger health and act on alerts on the ground.</p></article>
+          <article class="biz reveal"><div class="biz__ico">📈</div><h3 data-i18n="biz.report.t">Detailed reporting</h3><p data-i18n="biz.report.d">Granular financial, operational and utilization reporting — revenue, settlements, balances, sessions and trends, exportable for your finance team.</p></article>
+          <article class="biz reveal"><div class="biz__ico">🛠️</div><h3 data-i18n="biz.maint.t">Maintenance &amp; faults</h3><p data-i18n="biz.maint.d">Automatic charger error and fault reporting, anomaly detection and preventive-care scheduling keep uptime high and downtime short.</p></article>
+          <article class="biz reveal"><div class="biz__ico">🤖</div><h3 data-i18n="biz.ai.t">AI assistance &amp; forecasting</h3><p data-i18n="biz.ai.d">An AI assistant plus demand and load forecasting help you plan capacity, optimize tariffs and keep chargers available when drivers need them.</p></article>
         </div>
         <div class="biz-cta reveal">
           <a href="mailto:info@evoapp.org" class="btn btn--solid" data-i18n="biz.cta">Partner with EVO</a>
