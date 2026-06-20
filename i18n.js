@@ -6,22 +6,26 @@ window.EVO_I18N = {
 
     "hero.pill":"#1 EV charging network in the region",
     "hero.title":"Charge anywhere. Powered by the region's largest EV network.",
+    "hero.kicker":"Always Connected, Always Charged.",
     "hero.sub":"From a single app — find a charger, scan, charge and pay. EVO powers up to <strong>200,000 charging sessions every month</strong>, and is one of the largest EV charging networks in the world.",
     "hero.cta1":"Download EVO","hero.cta2":"Explore the network",
-    "hero.stat1":"sessions / month","hero.stat2":"fast charging","hero.stat3":"built bilingual",
+    "hero.stat1":"sessions / month","hero.stat2":"chargers online","hero.stat3":"stations in Jordan",
 
     "phone.greeting":"Good evening","phone.balance":"Wallet","phone.charging":"Charging now",
     "phone.live":"Live","phone.power":"Power","phone.energy":"Energy","phone.soc":"Battery",
+    "phone.price":"Current Price","phone.unit":"JOD / kWh","phone.valid":"⏱ Valid until 23:00 (On-Peak)",
+    "phone.nearby":"Nearby Stations","phone.within":"within 10 km","phone.recommended":"Recommended",
+    "phone.quickmatch":"⚡ Quick Match",
     "float.scan":"Scan & charge","float.points":"EVO points",
 
     "marquee.0":"Real-time availability","marquee.1":"QR one-tap charging",
     "marquee.2":"CCS · Type 2 · CHAdeMO","marquee.3":"Smart wallet",
     "marquee.4":"Loyalty rewards","marquee.5":"CarPlay & Android Auto",
 
-    "network.eyebrow":"The network","network.title":"Built at the scale of a region on the move",
-    "network.sub":"EVO connects drivers to a fast-growing grid of AC and DC chargers across the region — engineered for reliability, real-time visibility and effortless payment.",
-    "network.s1":"Charging sessions every month","network.s2v":"#1","network.s2":"Largest EV network in the region",
-    "network.s3":"From overnight AC to high-power DC fast charging","network.s4":"Live availability & in-app support",
+    "network.eyebrow":"The network","network.title":"Built at the scale of a nation on the move",
+    "network.sub":"From Amman to Aqaba, EVO connects drivers to a fast-growing grid of AC and DC chargers across Jordan — engineered for reliability, real-time visibility and effortless payment.",
+    "network.s1":"Charging sessions every month","network.s2":"Chargers online across the country",
+    "network.s3":"Live connectors, AC & high-power DC","network.s4v":"#1","network.s4":"Largest EV network in the region",
 
     "features.eyebrow":"One app, everything","features.title":"Your smart EV charging companion",
     "features.sub":"Every step of the journey — discovery, charging, payment and rewards — lives in one beautifully simple app.",
@@ -72,6 +76,12 @@ window.EVO_I18N = {
     "biz.report.t":"Detailed reporting","biz.report.d":"Granular financial, operational and utilization reporting — revenue, settlements, balances, sessions and trends, exportable for your finance team.",
     "biz.maint.t":"Maintenance & faults","biz.maint.d":"Automatic charger error and fault reporting, anomaly detection and preventive-care scheduling keep uptime high and downtime short.",
     "biz.ai.t":"AI assistance & forecasting","biz.ai.d":"An AI assistant plus demand and load forecasting help you plan capacity, optimize tariffs and keep chargers available when drivers need them.",
+    "biz.console.live":"Live","biz.console.k1":"Total Sessions","biz.console.k1n":"+34 vs yesterday",
+    "biz.console.k2":"Active Sessions","biz.console.k2n":"connectors charging",
+    "biz.console.k3":"Chargers Online","biz.console.k3n":"11 unavailable",
+    "biz.console.k4":"Power Delivered","biz.console.k4n":"9,768 A · live",
+    "biz.console.p1":"Available","biz.console.p2":"Charging","biz.console.p3":"Faulted","biz.console.p4":"Preparing",
+    "biz.console.total":"connectors monitored",
     "biz.cta":"Partner with EVO",
 
     "faq.eyebrow":"Good to know","faq.title":"Frequently asked questions",
@@ -83,7 +93,8 @@ window.EVO_I18N = {
     "faq.q6":"Can I use EVO in my car?","faq.a6":"Yes. EVO works with Apple CarPlay and Android Auto, showing live prices, nearby stations and your active session on your car's screen.",
 
     "cta.title":"Ready to drive on EVO?","cta.btn":"Get the app",
-    "footer.tag":"The region's largest EV charging network — powering up to 200,000 sessions a month.",
+    "footer.slogan":"Always Connected, Always Charged.",
+    "footer.tag":"The region's largest EV charging network — powering up to 200,000 sessions a month across Jordan.",
     "footer.product":"Product","footer.company":"Company","footer.get":"Get the app",
     "footer.contact":"Contact","footer.privacy":"Privacy Policy",
     "footer.rights":"© 2026 EVO — إيفو. All rights reserved.","footer.made":"Made for the region, in Jordan 🇯🇴"
@@ -95,22 +106,26 @@ window.EVO_I18N = {
 
     "hero.pill":"الشبكة رقم ١ لشحن السيارات الكهربائية في المنطقة",
     "hero.title":"اشحن في أي مكان. مدعوم بأكبر شبكة شحن كهربائية في المنطقة.",
+    "hero.kicker":"دائمًا متصل، دائمًا مشحون.",
     "hero.sub":"من تطبيق واحد — ابحث عن شاحن، امسح الرمز، اشحن وادفع. تشغّل EVO حتى <strong>٢٠٠٬٠٠٠ جلسة شحن شهريًا</strong>، وهي واحدة من أكبر شبكات شحن السيارات الكهربائية في العالم.",
     "hero.cta1":"حمّل EVO","hero.cta2":"اكتشف الشبكة",
-    "hero.stat1":"جلسة / شهريًا","hero.stat2":"شحن سريع","hero.stat3":"ثنائي اللغة",
+    "hero.stat1":"جلسة / شهريًا","hero.stat2":"شاحن متصل","hero.stat3":"محطة في الأردن",
 
     "phone.greeting":"مساء الخير","phone.balance":"المحفظة","phone.charging":"جاري الشحن",
     "phone.live":"مباشر","phone.power":"القدرة","phone.energy":"الطاقة","phone.soc":"البطارية",
+    "phone.price":"السعر الحالي","phone.unit":"دينار / ك.و.س","phone.valid":"⏱ ساري حتى ٢٣:٠٠ (وقت الذروة)",
+    "phone.nearby":"المحطات القريبة","phone.within":"ضمن ١٠ كم","phone.recommended":"موصى به",
+    "phone.quickmatch":"⚡ مطابقة سريعة",
     "float.scan":"امسح واشحن","float.points":"نقاط EVO",
 
     "marquee.0":"التوفر المباشر","marquee.1":"شحن بمسح الرمز",
     "marquee.2":"CCS · Type 2 · CHAdeMO","marquee.3":"محفظة ذكية",
     "marquee.4":"مكافآت الولاء","marquee.5":"CarPlay و Android Auto",
 
-    "network.eyebrow":"الشبكة","network.title":"بُنيت على مقاس منطقة تتحرك بسرعة",
-    "network.sub":"تربط EVO السائقين بشبكة سريعة النمو من شواحن التيار المتردد والمستمر عبر المنطقة — مصممة للموثوقية والوضوح اللحظي والدفع السلس.",
-    "network.s1":"جلسة شحن كل شهر","network.s2v":"الأولى","network.s2":"أكبر شبكة شحن كهربائية في المنطقة",
-    "network.s3":"من الشحن العادي ليلًا إلى الشحن السريع عالي القدرة","network.s4":"توفر مباشر ودعم داخل التطبيق",
+    "network.eyebrow":"الشبكة","network.title":"بُنيت على مقاس وطن يتحرك بسرعة",
+    "network.sub":"من عمّان إلى العقبة، تربط EVO السائقين بشبكة سريعة النمو من شواحن التيار المتردد والمستمر عبر الأردن — مصممة للموثوقية والوضوح اللحظي والدفع السلس.",
+    "network.s1":"جلسة شحن كل شهر","network.s2":"شاحن متصل عبر البلاد",
+    "network.s3":"موصل مباشر، تيار متردد ومستمر عالي القدرة","network.s4v":"الأولى","network.s4":"أكبر شبكة شحن كهربائية في المنطقة",
 
     "features.eyebrow":"تطبيق واحد لكل شيء","features.title":"رفيقك الذكي لشحن السيارات الكهربائية",
     "features.sub":"كل خطوة في رحلتك — الاكتشاف، الشحن، الدفع والمكافآت — في تطبيق واحد بسيط وأنيق.",
@@ -161,6 +176,12 @@ window.EVO_I18N = {
     "biz.report.t":"تقارير تفصيلية","biz.report.d":"تقارير مالية وتشغيلية واستخدامية دقيقة — الإيرادات والتسويات والأرصدة والجلسات والاتجاهات، قابلة للتصدير لفريقك المالي.",
     "biz.maint.t":"الصيانة والأعطال","biz.maint.d":"تقارير تلقائية لأخطاء وأعطال الشواحن، وكشف الحالات الشاذة، وجدولة الصيانة الوقائية لرفع الجاهزية وتقليل التوقف.",
     "biz.ai.t":"مساعدة وتنبؤ بالذكاء الاصطناعي","biz.ai.d":"مساعد ذكي إلى جانب التنبؤ بالطلب والأحمال يساعدك على تخطيط السعة وتحسين التعرفات وإبقاء الشواحن متاحة وقت حاجة السائقين.",
+    "biz.console.live":"مباشر","biz.console.k1":"إجمالي الجلسات","biz.console.k1n":"+٣٤ عن الأمس",
+    "biz.console.k2":"الجلسات النشطة","biz.console.k2n":"موصل قيد الشحن",
+    "biz.console.k3":"شواحن متصلة","biz.console.k3n":"١١ غير متاح",
+    "biz.console.k4":"القدرة المُسلّمة","biz.console.k4n":"٩٬٧٦٨ أمبير · مباشر",
+    "biz.console.p1":"متاح","biz.console.p2":"قيد الشحن","biz.console.p3":"معطّل","biz.console.p4":"قيد التجهيز",
+    "biz.console.total":"موصل تحت المراقبة",
     "biz.cta":"كن شريكًا مع EVO",
 
     "faq.eyebrow":"معلومات مفيدة","faq.title":"الأسئلة الشائعة",
@@ -172,7 +193,8 @@ window.EVO_I18N = {
     "faq.q6":"هل أستطيع استخدام EVO في سيارتي؟","faq.a6":"نعم. يعمل EVO مع Apple CarPlay و Android Auto، ويعرض الأسعار المباشرة والمحطات القريبة وجلستك النشطة على شاشة سيارتك.",
 
     "cta.title":"جاهز للانطلاق مع EVO؟","cta.btn":"حمّل التطبيق",
-    "footer.tag":"أكبر شبكة شحن كهربائية في المنطقة — تشغّل حتى ٢٠٠٬٠٠٠ جلسة شهريًا.",
+    "footer.slogan":"دائمًا متصل، دائمًا مشحون.",
+    "footer.tag":"أكبر شبكة شحن كهربائية في المنطقة — تشغّل حتى ٢٠٠٬٠٠٠ جلسة شهريًا عبر الأردن.",
     "footer.product":"المنتج","footer.company":"الشركة","footer.get":"حمّل التطبيق",
     "footer.contact":"تواصل معنا","footer.privacy":"سياسة الخصوصية",
     "footer.rights":"© ٢٠٢٦ EVO — إيفو. جميع الحقوق محفوظة.","footer.made":"صُنع للمنطقة، في الأردن 🇯🇴"
