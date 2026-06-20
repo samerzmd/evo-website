@@ -2,7 +2,7 @@
 window.EVO_I18N = {
   en: {
     "nav.network":"Network","nav.features":"Features","nav.how":"How it works",
-    "nav.app":"The App","nav.business":"For Business","nav.faq":"FAQ","nav.download":"Get the app",
+    "nav.app":"The App","nav.business":"For Business","nav.faq":"FAQ","nav.contact":"Contact","nav.download":"Get the app",
 
     "hero.pill":"#1 EV charging network in the region",
     "hero.title":"Charge anywhere. Powered by the region's largest EV network.",
@@ -93,6 +93,18 @@ window.EVO_I18N = {
     "faq.q6":"Can I use EVO in my car?","faq.a6":"Yes. EVO works with Apple CarPlay and Android Auto, showing live prices, nearby stations and your active session on your car's screen.",
 
     "cta.title":"Ready to drive on EVO?","cta.btn":"Get the app",
+
+    "contact.eyebrow":"Contact","contact.title":"Get In Touch!",
+    "contact.sub":"Have questions or feedback? Reach out to our team anytime.",
+    "contact.addressT":"Address","contact.address":"Amman – Jordan",
+    "contact.phoneT":"Phone Number","contact.emailT":"E-mail",
+    "contact.ph.name":"Name","contact.ph.email":"Email Address","contact.ph.phone":"Phone Number",
+    "contact.ph.subject":"Message Subject","contact.ph.message":"Your Message",
+    "contact.submit":"Submit","contact.sending":"Sending…",
+    "contact.success":"Thanks! Your message has been sent — we'll be in touch soon.",
+    "contact.error":"Something went wrong. Please try again or email info@evoapp.org.",
+    "wa.label":"WhatsApp Us",
+
     "footer.slogan":"Always Connected, Always Charged.",
     "footer.tag":"The region's largest EV charging network — powering up to 200,000 sessions a month across Jordan.",
     "footer.product":"Product","footer.company":"Company","footer.get":"Get the app",
@@ -102,7 +114,7 @@ window.EVO_I18N = {
 
   ar: {
     "nav.network":"الشبكة","nav.features":"المزايا","nav.how":"كيف يعمل",
-    "nav.app":"التطبيق","nav.business":"للأعمال","nav.faq":"الأسئلة الشائعة","nav.download":"حمّل التطبيق",
+    "nav.app":"التطبيق","nav.business":"للأعمال","nav.faq":"الأسئلة الشائعة","nav.contact":"تواصل معنا","nav.download":"حمّل التطبيق",
 
     "hero.pill":"الشبكة رقم ١ لشحن السيارات الكهربائية في المنطقة",
     "hero.title":"اشحن في أي مكان. مدعوم بأكبر شبكة شحن كهربائية في المنطقة.",
@@ -193,6 +205,18 @@ window.EVO_I18N = {
     "faq.q6":"هل أستطيع استخدام EVO في سيارتي؟","faq.a6":"نعم. يعمل EVO مع Apple CarPlay و Android Auto، ويعرض الأسعار المباشرة والمحطات القريبة وجلستك النشطة على شاشة سيارتك.",
 
     "cta.title":"جاهز للانطلاق مع EVO؟","cta.btn":"حمّل التطبيق",
+
+    "contact.eyebrow":"تواصل","contact.title":"تواصل معنا!",
+    "contact.sub":"لديك أسئلة أو ملاحظات؟ تواصل مع فريقنا في أي وقت.",
+    "contact.addressT":"العنوان","contact.address":"عمّان – الأردن",
+    "contact.phoneT":"رقم الهاتف","contact.emailT":"البريد الإلكتروني",
+    "contact.ph.name":"الاسم","contact.ph.email":"البريد الإلكتروني","contact.ph.phone":"رقم الهاتف",
+    "contact.ph.subject":"موضوع الرسالة","contact.ph.message":"رسالتك",
+    "contact.submit":"إرسال","contact.sending":"جارٍ الإرسال…",
+    "contact.success":"شكرًا لك! تم إرسال رسالتك — سنتواصل معك قريبًا.",
+    "contact.error":"حدث خطأ ما. حاول مرة أخرى أو راسلنا على info@evoapp.org.",
+    "wa.label":"تواصل عبر واتساب",
+
     "footer.slogan":"دائمًا متصل، دائمًا مشحون.",
     "footer.tag":"أكبر شبكة شحن كهربائية في المنطقة — تشغّل حتى ٢٠٠٬٠٠٠ جلسة شهريًا عبر الأردن.",
     "footer.product":"المنتج","footer.company":"الشركة","footer.get":"حمّل التطبيق",

@@ -17,6 +17,10 @@
       var key = el.getAttribute("data-i18n");
       if (table[key] != null) el.innerHTML = table[key];
     });
+    document.querySelectorAll("[data-ph]").forEach(function (el) {
+      var key = el.getAttribute("data-ph");
+      if (table[key] != null) el.setAttribute("placeholder", table[key]);
+    });
     // toggle button shows the OTHER language
     var label = document.querySelector("[data-lang-label]");
     if (label) label.textContent = l === "ar" ? "English" : "العربية";
@@ -135,6 +139,57 @@
     box.appendChild(svg);
   }
   drawQR(document.getElementById("qrBox"));
+
+  /* ---------- contact form (FormSubmit AJAX -> multiple recipients) ---------- */
+  var form = document.getElementById("contactForm");
+  if (form) {
+    var statusEl = document.getElementById("cformStatus");
+    var btn = document.getElementById("cformBtn");
+    var ENDPOINT = "https://formsubmit.co/ajax/bilal@evoapp.org";
+    var t = function (k) { return (dict[lang] && dict[lang][k]) || (dict.en && dict.en[k]) || ""; };
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (form._honey && form._honey.value) return; // bot trap
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+
+      var payload = {
+        name: form.name.value.trim(),
+        email: form.email.value.trim(),
+        phone: form.phone.value.trim(),
+        subject: form.subject.value.trim(),
+        message: form.message.value.trim(),
+        _cc: "ibrahim@evoapp.org,dev@evoapp.org",
+        _subject: "New EVO website enquiry" + (form.subject.value.trim() ? " — " + form.subject.value.trim() : ""),
+        _template: "table"
+      };
+
+      btn.disabled = true;
+      statusEl.className = "cform__status";
+      statusEl.textContent = t("contact.sending");
+
+      fetch(ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify(payload)
+      })
+        .then(function (r) { return r.json().catch(function () { return {}; }).then(function (d) { return { ok: r.ok, d: d }; }); })
+        .then(function (res) {
+          if (res.ok && (res.d.success === "true" || res.d.success === true)) {
+            statusEl.className = "cform__status ok";
+            statusEl.textContent = t("contact.success");
+            form.reset();
+          } else {
+            throw new Error("send failed");
+          }
+        })
+        .catch(function () {
+          statusEl.className = "cform__status err";
+          statusEl.textContent = t("contact.error");
+        })
+        .finally(function () { btn.disabled = false; });
+    });
+  }
 
   /* ---------- init ---------- */
   applyLang(lang);
