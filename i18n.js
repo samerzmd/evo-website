@@ -7,7 +7,7 @@ window.EVO_I18N = {
     "hero.pill":"#1 EV charging network in the region",
     "hero.title":"Charge anywhere. Powered by the region's largest EV network.",
     "hero.kicker":"Always Connected, Always Charged.",
-    "hero.sub":"From a single app — find a charger, scan, charge and pay. EVO powers up to <strong>200,000 charging sessions every month</strong>, and is one of the largest EV charging networks in the world.",
+    "hero.sub":"From a single app — find a charger, scan, charge and pay. EVO powers up to <strong>200,000 charging sessions every month</strong> — and the same platform is engineered to scale far beyond Jordan to serve markets worldwide.",
     "hero.cta1":"Download EVO","hero.cta2":"Explore the network",
     "hero.stat1":"sessions / month","hero.stat2":"chargers online","hero.stat3":"stations in Jordan",
 
@@ -26,6 +26,14 @@ window.EVO_I18N = {
     "network.sub":"From Amman to Aqaba, EVO connects drivers to a fast-growing grid of AC and DC chargers across Jordan — engineered for reliability, real-time visibility and effortless payment.",
     "network.s1":"Charging sessions every month","network.s2":"Chargers online across the country",
     "network.s3":"Live connectors, AC & high-power DC","network.s4v":"#1","network.s4":"Largest EV network in the region",
+
+    "global.eyebrow":"Built to scale","global.title":"Proven in Jordan. Engineered for the world.",
+    "global.sub":"EVO's success at home is just the start. The very platform that already powers up to 200,000 sessions a month in Jordan is architected from the ground up to cross borders — ready to roll out across new countries, currencies, languages and operators on one cloud-native core.",
+    "g.1t":"Multi-country by design","g.1d":"A cloud-native, OCPP-standard core that expands into new countries and regions without re-platforming.",
+    "g.2t":"Any currency & payment rail","g.2d":"Localized tariffs, wallets and payment methods — plug in each market's preferred currencies and rails.",
+    "g.3t":"Any language, any direction","g.3d":"Full localization with right-to-left and left-to-right support — already bilingual, ready for many more.",
+    "g.4t":"Multi-operator & roaming-ready","g.4d":"Run many networks, operators and partners on one platform — built to interconnect and roam across markets.",
+    "global.note":"White-label ready · OCPP 1.6 & 2.0.1 · Cloud-scale · 25+ charger brands · All connector standards",
 
     "features.eyebrow":"One app, everything","features.title":"Your smart EV charging companion",
     "features.sub":"Every step of the journey — discovery, charging, payment and rewards — lives in one beautifully simple app.",
@@ -119,7 +127,7 @@ window.EVO_I18N = {
     "hero.pill":"الشبكة رقم ١ لشحن السيارات الكهربائية في المنطقة",
     "hero.title":"اشحن في أي مكان. مدعوم بأكبر شبكة شحن كهربائية في المنطقة.",
     "hero.kicker":"دائمًا متصل، دائمًا مشحون.",
-    "hero.sub":"من تطبيق واحد — ابحث عن شاحن، امسح الرمز، اشحن وادفع. تشغّل EVO حتى <strong>٢٠٠٬٠٠٠ جلسة شحن شهريًا</strong>، وهي واحدة من أكبر شبكات شحن السيارات الكهربائية في العالم.",
+    "hero.sub":"من تطبيق واحد — ابحث عن شاحن، امسح الرمز، اشحن وادفع. تشغّل EVO حتى <strong>٢٠٠٬٠٠٠ جلسة شحن شهريًا</strong> — والمنصة نفسها مصمّمة للتوسّع إلى ما هو أبعد من الأردن لخدمة الأسواق حول العالم.",
     "hero.cta1":"حمّل EVO","hero.cta2":"اكتشف الشبكة",
     "hero.stat1":"جلسة / شهريًا","hero.stat2":"شاحن متصل","hero.stat3":"محطة في الأردن",
 
@@ -138,6 +146,14 @@ window.EVO_I18N = {
     "network.sub":"من عمّان إلى العقبة، تربط EVO السائقين بشبكة سريعة النمو من شواحن التيار المتردد والمستمر عبر الأردن — مصممة للموثوقية والوضوح اللحظي والدفع السلس.",
     "network.s1":"جلسة شحن كل شهر","network.s2":"شاحن متصل عبر البلاد",
     "network.s3":"موصل مباشر، تيار متردد ومستمر عالي القدرة","network.s4v":"الأولى","network.s4":"أكبر شبكة شحن كهربائية في المنطقة",
+
+    "global.eyebrow":"مصمّمة للتوسّع","global.title":"أثبتت نجاحها في الأردن. ومصمّمة للعالم.",
+    "global.sub":"نجاح EVO في موطنها ليس سوى البداية. فالمنصة ذاتها التي تشغّل حتى ٢٠٠٬٠٠٠ جلسة شهريًا في الأردن مبنية من الأساس لتعبر الحدود — جاهزة للانطلاق إلى دول وعملات ولغات ومشغّلين جدد على نواة سحابية واحدة.",
+    "g.1t":"متعدّدة الدول بالتصميم","g.1d":"نواة سحابية بمعيار OCPP تتوسّع إلى دول ومناطق جديدة دون إعادة بناء المنصة.",
+    "g.2t":"أي عملة ووسيلة دفع","g.2d":"تعرفات ومحافظ ووسائل دفع معرّبة — أضف عملات ووسائل الدفع المفضّلة لكل سوق.",
+    "g.3t":"أي لغة وأي اتجاه","g.3d":"توطين كامل بدعم الكتابة من اليمين لليسار ومن اليسار لليمين — ثنائي اللغة بالفعل وجاهز للمزيد.",
+    "g.4t":"متعدّدة المشغّلين وجاهزة للتجوال","g.4d":"شغّل شبكات ومشغّلين وشركاء متعدّدين على منصة واحدة — مبنية للترابط والتجوال عبر الأسواق.",
+    "global.note":"جاهزة للعلامة البيضاء · OCPP 1.6 و 2.0.1 · بمقياس سحابي · أكثر من ٢٥ علامة شواحن · كل معايير الموصلات",
 
     "features.eyebrow":"تطبيق واحد لكل شيء","features.title":"رفيقك الذكي لشحن السيارات الكهربائية",
     "features.sub":"كل خطوة في رحلتك — الاكتشاف، الشحن، الدفع والمكافآت — في تطبيق واحد بسيط وأنيق.",

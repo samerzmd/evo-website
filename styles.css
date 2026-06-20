@@ -145,6 +145,16 @@ html[dir="rtl"] .marquee__track{animation-direction:reverse}
 .stat-card b{display:block;font-size:2.6rem;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:800}
 .stat-card span{color:var(--slate);font-size:.95rem;font-weight:600}
 
+/* ===== global scale ===== */
+.global{padding:90px 0;background:radial-gradient(120% 100% at 50% -10%,var(--bg-mint),#fff 60%)}
+.global-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.gcard{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 24px;text-align:center;transition:transform .25s,box-shadow .25s,border-color .25s}
+.gcard:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:rgba(13,121,86,.3)}
+.gcard__ico{width:58px;height:58px;margin:0 auto 1rem;display:grid;place-items:center;font-size:1.7rem;background:var(--bg-mint);border-radius:50%}
+.gcard h3{font-size:1.12rem;margin-bottom:.5rem;color:var(--ink)}
+.gcard p{color:var(--slate);font-size:.94rem}
+.global-note{text-align:center;margin-top:34px;font-weight:700;color:var(--teal);font-size:.95rem;letter-spacing:.01em}
+
 /* ===== features ===== */
 .features{padding:90px 0;background:var(--bg-soft)}
 .feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
@@ -318,7 +328,7 @@ html[dir="rtl"] .wa-fab{right:auto;left:22px}
 
 /* ===== responsive ===== */
 @media (max-width:980px){
-  .stat-grid,.feature-grid,.steps,.biz-grid{grid-template-columns:repeat(2,1fr)}
+  .stat-grid,.feature-grid,.steps,.biz-grid,.global-grid{grid-template-columns:repeat(2,1fr)}
   .hero__grid,.incar__grid,.app__inner,.contact__grid{grid-template-columns:1fr}
   .hero__visual{order:-1}
   .app__inner{padding:32px}
@@ -331,7 +341,7 @@ html[dir="rtl"] .wa-fab{right:auto;left:22px}
   .footer__grid{grid-template-columns:1fr 1fr}
 }
 @media (max-width:520px){
-  .stat-grid,.feature-grid,.steps,.biz-grid,.footer__grid,.cform__row{grid-template-columns:1fr}
+  .stat-grid,.feature-grid,.steps,.biz-grid,.footer__grid,.cform__row,.global-grid{grid-template-columns:1fr}
   .hero__trust{gap:1.2rem}
   .cta-band__inner{padding:32px}
 }
