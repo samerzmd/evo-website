@@ -3,11 +3,22 @@
   var dict = window.EVO_I18N || { en: {}, ar: {} };
 
   /* ---------- language ---------- */
+  var SUPPORTED = ["en", "ar", "zh", "th", "fr"];
+  var SHORT = { en: "EN", ar: "عربي", zh: "中文", th: "ไทย", fr: "FR" };
+  function detect() {
+    var n = (navigator.language || "en").toLowerCase();
+    if (n.indexOf("ar") === 0) return "ar";
+    if (n.indexOf("zh") === 0) return "zh";
+    if (n.indexOf("th") === 0) return "th";
+    if (n.indexOf("fr") === 0) return "fr";
+    return "en";
+  }
   var saved = null;
   try { saved = localStorage.getItem("evo_lang"); } catch (e) {}
-  var lang = saved || (navigator.language && navigator.language.indexOf("ar") === 0 ? "ar" : "en");
+  var lang = (SUPPORTED.indexOf(saved) >= 0 ? saved : null) || detect();
 
   function applyLang(l) {
+    if (SUPPORTED.indexOf(l) < 0) l = "en";
     lang = l;
     var html = document.documentElement;
     html.setAttribute("lang", l);
@@ -21,17 +32,41 @@
       var key = el.getAttribute("data-ph");
       if (table[key] != null) el.setAttribute("placeholder", table[key]);
     });
-    // toggle button shows the OTHER language
-    var label = document.querySelector("[data-lang-label]");
-    if (label) label.textContent = l === "ar" ? "English" : "العربية";
+    var cur = document.getElementById("langCurrent");
+    if (cur) cur.textContent = SHORT[l] || l.toUpperCase();
+    document.querySelectorAll("#langMenu [data-lang]").forEach(function (b) {
+      b.setAttribute("aria-selected", b.getAttribute("data-lang") === l ? "true" : "false");
+    });
     try { localStorage.setItem("evo_lang", l); } catch (e) {}
     runCounters(true); // re-render numbers in correct numerals
   }
 
-  var toggle = document.getElementById("langToggle");
-  if (toggle) toggle.addEventListener("click", function () {
-    applyLang(lang === "ar" ? "en" : "ar");
-  });
+  /* language dropdown */
+  var langBtn = document.getElementById("langBtn");
+  var langMenu = document.getElementById("langMenu");
+  function closeLang() {
+    if (langMenu) langMenu.classList.remove("open");
+    if (langBtn) langBtn.setAttribute("aria-expanded", "false");
+  }
+  if (langBtn && langMenu) {
+    langBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      var open = langMenu.classList.toggle("open");
+      langBtn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    langMenu.querySelectorAll("[data-lang]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        applyLang(b.getAttribute("data-lang"));
+        closeLang();
+      });
+    });
+    document.addEventListener("click", function (e) {
+      if (!langMenu.contains(e.target) && e.target !== langBtn) closeLang();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closeLang();
+    });
+  }
 
   /* ---------- mobile nav ---------- */
   var burger = document.getElementById("burger");
