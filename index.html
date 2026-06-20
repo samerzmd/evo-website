@@ -8,15 +8,47 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Mulish:wght@400;600;700;800&family=Noto+Sans+SC:wght@400;500;700;800&family=Noto+Sans+Thai:wght@400;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="icon" type="image/png" href="assets/evo-icon.png?v=16" />
-  <link rel="stylesheet" href="styles.css?v=16" />
+  <link rel="icon" type="image/png" href="assets/evo-icon.png?v=18" />
+  <!-- Google Analytics (GA4) with Consent Mode v2 -->
+  <script>
+    window.EVO_GA_ID = "G-NKVVTK9SGX"; // GA4 Measurement ID
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { dataLayer.push(arguments); };
+    gtag("js", new Date());
+    // Default consent: deny storage until the visitor decides (GDPR-safe)
+    gtag("consent", "default", {
+      ad_storage: "denied",
+      ad_user_data: "denied",
+      ad_personalization: "denied",
+      analytics_storage: "denied",
+      functionality_storage: "granted",
+      security_storage: "granted",
+      wait_for_update: 500
+    });
+    // Re-apply a previously granted choice before the tag fires
+    try {
+      if (localStorage.getItem("evo_consent") === "granted") {
+        gtag("consent", "update", { ad_storage: "granted", ad_user_data: "granted", ad_personalization: "granted", analytics_storage: "granted" });
+      }
+    } catch (e) {}
+    (function () {
+      var id = window.EVO_GA_ID;
+      if (!id || id.indexOf("XXXX") > -1) return;
+      var s = document.createElement("script");
+      s.async = true;
+      s.src = "https://www.googletagmanager.com/gtag/js?id=" + id;
+      document.head.appendChild(s);
+      gtag("config", id, { anonymize_ip: true });
+    })();
+  </script>
+  <link rel="stylesheet" href="styles.css?v=18" />
 </head>
 <body>
   <!-- ============ NAV ============ -->
   <header class="nav" id="nav">
     <div class="container nav__inner">
       <a href="#top" class="brand" aria-label="EVO — Always Connected, Always Charged">
-        <img class="brand__logo" src="assets/evo-logo.png?v=16" alt="EVO — Always Connected, Always Charged" />
+        <img class="brand__logo" src="assets/evo-logo.png?v=18" alt="EVO — Always Connected, Always Charged" />
       </a>
 
       <nav class="nav__links" id="navLinks">
@@ -610,12 +642,21 @@
     <span class="wa-fab__label" data-i18n="wa.label">WhatsApp Us</span>
   </a>
 
+  <!-- cookie consent (GA Consent Mode) -->
+  <div class="consent" id="consent" role="dialog" aria-live="polite" hidden>
+    <p class="consent__text" data-i18n="consent.text">We use cookies to analyze traffic and improve your experience. <a href="https://api.evoapp.org/assets/static/privacy-policy.html" target="_blank" rel="noopener">Privacy Policy</a></p>
+    <div class="consent__actions">
+      <button class="btn btn--ghost btn--sm" id="consentDecline" data-i18n="consent.decline">Decline</button>
+      <button class="btn btn--solid btn--sm" id="consentAccept" data-i18n="consent.accept">Accept</button>
+    </div>
+  </div>
+
   <!-- ============ FOOTER ============ -->
   <footer class="footer">
     <div class="container footer__grid">
       <div class="footer__brand">
         <a href="#top" class="brand brand--light">
-          <img class="brand__logo" src="assets/evo-logo-white.png?v=16" alt="EVO" />
+          <img class="brand__logo" src="assets/evo-logo-white.png?v=18" alt="EVO" />
         </a>
         <p class="footer__slogan" data-i18n="footer.slogan">Always Connected, Always Charged.</p>
         <p data-i18n="footer.tag">The region's largest EV charging network — powering up to 200,000 sessions a month across Jordan.</p>
@@ -645,7 +686,7 @@
     </div>
   </footer>
 
-  <script src="i18n.js?v=16"></script>
-  <script src="script.js?v=16"></script>
+  <script src="i18n.js?v=18"></script>
+  <script src="script.js?v=18"></script>
 </body>
 </html>

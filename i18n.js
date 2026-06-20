@@ -163,6 +163,8 @@ window.EVO_I18N = {
     "contact.success":"Thanks! Your message has been sent — we'll be in touch soon.",
     "contact.error":"Something went wrong. Please try again or email info@evoapp.org.",
     "wa.label":"WhatsApp Us",
+    "consent.text":"We use cookies to analyze traffic and improve your experience. <a href='https://api.evoapp.org/assets/static/privacy-policy.html' target='_blank' rel='noopener'>Privacy Policy</a>",
+    "consent.accept":"Accept","consent.decline":"Decline",
 
     "footer.slogan":"Always Connected, Always Charged.",
     "footer.tag":"The region's largest EV charging network — powering up to 200,000 sessions a month across Jordan.",
@@ -334,6 +336,8 @@ window.EVO_I18N = {
     "contact.success":"شكرًا لك! تم إرسال رسالتك — سنتواصل معك قريبًا.",
     "contact.error":"حدث خطأ ما. حاول مرة أخرى أو راسلنا على info@evoapp.org.",
     "wa.label":"تواصل عبر واتساب",
+    "consent.text":"نستخدم ملفات تعريف الارتباط لتحليل الزيارات وتحسين تجربتك. <a href='https://api.evoapp.org/assets/static/privacy-policy.html' target='_blank' rel='noopener'>سياسة الخصوصية</a>",
+    "consent.accept":"موافق","consent.decline":"رفض",
 
     "footer.slogan":"دائمًا متصل، دائمًا مشحون.",
     "footer.tag":"أكبر شبكة شحن كهربائية في المنطقة — تشغّل حتى ٢٠٠٬٠٠٠ جلسة شهريًا عبر الأردن.",
@@ -505,6 +509,8 @@ window.EVO_I18N = {
     "contact.success":"Merci ! Votre message a été envoyé — nous vous répondrons bientôt.",
     "contact.error":"Une erreur s'est produite. Réessayez ou écrivez à info@evoapp.org.",
     "wa.label":"Nous écrire sur WhatsApp",
+    "consent.text":"Nous utilisons des cookies pour analyser le trafic et améliorer votre expérience. <a href='https://api.evoapp.org/assets/static/privacy-policy.html' target='_blank' rel='noopener'>Politique de confidentialité</a>",
+    "consent.accept":"Accepter","consent.decline":"Refuser",
 
     "footer.slogan":"Toujours connecté, toujours chargé.",
     "footer.tag":"Le plus grand réseau de recharge VE de la région — jusqu'à 200 000 sessions par mois à travers la Jordanie.",
@@ -676,6 +682,8 @@ window.EVO_I18N = {
     "contact.success":"谢谢！您的留言已发送——我们会尽快与您联系。",
     "contact.error":"出现了问题。请重试，或发送邮件至 info@evoapp.org。",
     "wa.label":"WhatsApp 联系我们",
+    "consent.text":"我们使用 Cookie 来分析流量并改善您的体验。<a href='https://api.evoapp.org/assets/static/privacy-policy.html' target='_blank' rel='noopener'>隐私政策</a>",
+    "consent.accept":"接受","consent.decline":"拒绝",
 
     "footer.slogan":"始终连接，始终充电。",
     "footer.tag":"地区最大的电动车充电网络——每月在约旦支撑高达 20 万次充电。",
@@ -847,6 +855,8 @@ window.EVO_I18N = {
     "contact.success":"ขอบคุณ! ส่งข้อความของคุณแล้ว — เราจะติดต่อกลับโดยเร็ว",
     "contact.error":"เกิดข้อผิดพลาด โปรดลองอีกครั้งหรืออีเมลถึง info@evoapp.org",
     "wa.label":"แชตเราทาง WhatsApp",
+    "consent.text":"เราใช้คุกกี้เพื่อวิเคราะห์การเข้าชมและปรับปรุงประสบการณ์ของคุณ <a href='https://api.evoapp.org/assets/static/privacy-policy.html' target='_blank' rel='noopener'>นโยบายความเป็นส่วนตัว</a>",
+    "consent.accept":"ยอมรับ","consent.decline":"ปฏิเสธ",
 
     "footer.slogan":"เชื่อมต่อเสมอ พร้อมชาร์จเสมอ",
     "footer.tag":"เครือข่ายชาร์จ EV ที่ใหญ่ที่สุดในภูมิภาค — รองรับการชาร์จสูงสุดถึง 200,000 ครั้งต่อเดือนทั่วจอร์แดน",

@@ -96,8 +96,10 @@
     });
     langMenu.querySelectorAll("[data-lang]").forEach(function (b) {
       b.addEventListener("click", function () {
-        applyLang(b.getAttribute("data-lang"));
+        var l = b.getAttribute("data-lang");
+        applyLang(l);
         closeLang();
+        if (window.evoTrack) window.evoTrack("language_change", { language: l });
       });
     });
     document.addEventListener("click", function (e) {
@@ -132,6 +134,7 @@
       ppanels.forEach(function (p) {
         p.classList.toggle("is-active", p.getAttribute("data-ppanel") === key);
       });
+      if (window.evoTrack) window.evoTrack("persona_select", { persona: key });
     });
   });
 
@@ -259,6 +262,7 @@
       btn.disabled = true;
       statusEl.className = "cform__status";
       statusEl.textContent = t("contact.sending");
+      track("contact_submit", { subject: payload.subject || "(none)" });
 
       fetch(ENDPOINT, {
         method: "POST",
@@ -271,6 +275,7 @@
             statusEl.className = "cform__status ok";
             statusEl.textContent = t("contact.success");
             form.reset();
+            track("generate_lead", { form: "contact" });
           } else {
             throw new Error("send failed");
           }
@@ -278,9 +283,71 @@
         .catch(function () {
           statusEl.className = "cform__status err";
           statusEl.textContent = t("contact.error");
+          track("contact_error");
         })
         .finally(function () { btn.disabled = false; });
     });
+  }
+
+  /* ---------- analytics (GA4 custom events) ---------- */
+  function track(name, params) {
+    try { if (typeof window.gtag === "function") window.gtag("event", name, params || {}); } catch (e) {}
+  }
+  window.evoTrack = track;
+
+  // outbound + CTA click tracking (delegated)
+  document.addEventListener("click", function (e) {
+    var el = e.target.closest("a, button");
+    if (!el) return;
+    var href = el.getAttribute("href") || "";
+    if (href.indexOf("wa.me") > -1) return track("whatsapp_click", { location: el.classList.contains("wa-fab") ? "floating" : "contact" });
+    if (href.indexOf("apps.apple.com") > -1) return track("store_click", { store: "app_store" });
+    if (href.indexOf("play.google.com") > -1) return track("store_click", { store: "google_play" });
+    if (href.indexOf("linkedin.com") > -1) return track("team_linkedin_click", { url: href });
+    var key = el.getAttribute("data-i18n") || "";
+    if (key === "hero.cta1" || key === "nav.download" || key === "cta.btn" || key === "app.title" || key === "per.driver.cta")
+      return track("app_cta_click", { label: el.textContent.trim() });
+    if (key === "biz.cta" || key === "per.network.cta" || key === "per.owner.cta" || key === "per.fleet.cta")
+      return track("partner_cta_click", { label: el.textContent.trim() });
+    if (href.indexOf("mailto:") === 0) return track("email_click");
+    if (href.indexOf("tel:") === 0) return track("phone_click");
+    if (el.matches(".nav__links a")) return track("nav_click", { target: href.replace("#", "") });
+  });
+
+  // FAQ opens
+  document.querySelectorAll(".qa").forEach(function (d) {
+    d.addEventListener("toggle", function () {
+      if (d.open) {
+        var q = d.querySelector("summary");
+        track("faq_open", { question: q ? q.textContent.trim().slice(0, 80) : "" });
+      }
+    });
+  });
+
+  /* ---------- cookie consent (GA Consent Mode v2) ---------- */
+  var consentEl = document.getElementById("consent");
+  if (consentEl) {
+    var stored = null;
+    try { stored = localStorage.getItem("evo_consent"); } catch (e) {}
+    function setConsent(choice) {
+      try { localStorage.setItem("evo_consent", choice); } catch (e) {}
+      if (typeof window.gtag === "function") {
+        var granted = choice === "granted";
+        window.gtag("consent", "update", {
+          ad_storage: granted ? "granted" : "denied",
+          ad_user_data: granted ? "granted" : "denied",
+          ad_personalization: granted ? "granted" : "denied",
+          analytics_storage: granted ? "granted" : "denied"
+        });
+      }
+      track("consent_" + (choice === "granted" ? "accept" : "decline"));
+      consentEl.hidden = true;
+    }
+    if (stored !== "granted" && stored !== "denied") consentEl.hidden = false;
+    var acc = document.getElementById("consentAccept");
+    var dec = document.getElementById("consentDecline");
+    if (acc) acc.addEventListener("click", function () { setConsent("granted"); });
+    if (dec) dec.addEventListener("click", function () { setConsent("denied"); });
   }
 
   /* ---------- init ---------- */
