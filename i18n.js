@@ -15,7 +15,7 @@ window.EVO_I18N = {
     "phone.live":"Live","phone.power":"Power","phone.energy":"Energy","phone.soc":"Battery",
     "phone.price":"Current Price","phone.unit":"JOD / kWh","phone.valid":"⏱ Valid until 23:00 (On-Peak)",
     "phone.nearby":"Nearby Stations","phone.within":"within 10 km","phone.recommended":"Recommended",
-    "phone.quickmatch":"⚡ Quick Match",
+    "phone.recdist":"3.0 km · 5 min","phone.quickmatch":"⚡ Quick Match",
     "float.scan":"Scan & charge","float.points":"EVO points",
 
     "marquee.0":"Real-time availability","marquee.1":"QR one-tap charging",
@@ -115,7 +115,7 @@ window.EVO_I18N = {
     "phone.live":"مباشر","phone.power":"القدرة","phone.energy":"الطاقة","phone.soc":"البطارية",
     "phone.price":"السعر الحالي","phone.unit":"دينار / ك.و.س","phone.valid":"⏱ ساري حتى ٢٣:٠٠ (وقت الذروة)",
     "phone.nearby":"المحطات القريبة","phone.within":"ضمن ١٠ كم","phone.recommended":"موصى به",
-    "phone.quickmatch":"⚡ مطابقة سريعة",
+    "phone.recdist":"٣٫٠ كم · ٥ د","phone.quickmatch":"⚡ مطابقة سريعة",
     "float.scan":"امسح واشحن","float.points":"نقاط EVO",
 
     "marquee.0":"التوفر المباشر","marquee.1":"شحن بمسح الرمز",
