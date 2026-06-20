@@ -31,7 +31,8 @@
     roaming: '<path d="M4 9a8 8 0 0 1 13.3-3.3L20 8"/><path d="M20 15a8 8 0 0 1-13.3 3.3L4 16"/><path d="M20 4.5V8h-3.5M4 19.5V16h3.5"/>',
     station: '<rect x="5.5" y="3.5" width="9" height="17" rx="1.5"/><path d="M8 7h4M8 10h4"/><path d="M14.5 8h2l1.8 1.8v5.4a1.5 1.5 0 0 1-3 0V12h-1.3"/>',
     buildings: '<path d="M3 21V8.5l6-3v15.5"/><path d="M9 21V11l6-2.8V21"/><path d="M15 21v-9l5 2.3V21"/><path d="M2.5 21h19"/>',
-    email: '<rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 7.5 8.5 5.5 8.5-5.5"/>'
+    email: '<rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 7.5 8.5 5.5 8.5-5.5"/>',
+    leaf: '<path d="M4 20s.5-7 5-11.5C13 4.5 20 4 20 4s.5 7-4 11.5C11.5 20 4 20 4 20Z"/><path d="M4 20c3-4.5 6.5-7 11-9"/>'
   };
   function injectIcons() {
     document.querySelectorAll("[data-icon]").forEach(function (el) {

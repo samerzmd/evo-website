@@ -174,6 +174,20 @@ html[dir="rtl"] .marquee__track{animation-direction:reverse}
 .ppanel__list li::before{content:"✓";position:absolute;inset-inline-start:0;top:1px;width:21px;height:21px;background:var(--green);color:#fff;border-radius:50%;font-size:.72rem;font-weight:800;text-align:center;line-height:21px}
 @media (max-width:880px){.ppanel{grid-template-columns:1fr;gap:28px;padding:30px}}
 
+/* ===== sustainability / impact ===== */
+.green{padding:90px 0;background:linear-gradient(180deg,#fff,var(--bg-mint))}
+.green-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.green-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 22px;text-align:center;transition:transform .25s,box-shadow .25s}
+.green-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-sm)}
+.green-card b{display:block;font-size:2.3rem;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:800}
+.green-card span{color:var(--slate);font-size:.92rem;font-weight:600}
+.green-equiv{display:flex;align-items:center;justify-content:center;gap:.6rem;text-align:center;max-width:760px;margin:30px auto 0;color:var(--teal);font-weight:700;font-size:1.05rem}
+.green-leaf{flex:none;width:26px;height:26px;color:var(--green)}
+.green-leaf svg{width:26px;height:26px}
+.green-note{text-align:center;max-width:680px;margin:14px auto 0;color:var(--slate);font-size:.8rem;line-height:1.5}
+@media (max-width:880px){.green-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:480px){.green-grid{grid-template-columns:1fr}}
+
 /* ===== global scale ===== */
 .global{padding:90px 0;background:radial-gradient(120% 100% at 50% -10%,var(--bg-mint),#fff 60%)}
 .global-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
